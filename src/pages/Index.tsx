@@ -47,7 +47,7 @@ const Index = () => {
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
-            Jordan Studio
+            Vinícius Jimenez Novack
           </h1>
         </div>
 
