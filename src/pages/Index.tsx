@@ -65,7 +65,11 @@ const Index = () => {
             href="https://www.linkedin.com/in/vininovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://www.linkedin.com/in/vininovack", "_blank", "noopener,noreferrer");
+            }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors cursor-pointer"
           >
             <Linkedin size={18} />
             <span className="text-sm font-medium">Vinícius Jimenez Novack</span>
@@ -74,7 +78,11 @@ const Index = () => {
             href="https://github.com/ViniNovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://github.com/ViniNovack", "_blank", "noopener,noreferrer");
+            }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors cursor-pointer"
           >
             <Github size={18} />
             <span className="text-sm font-medium">ViniNovack</span>
