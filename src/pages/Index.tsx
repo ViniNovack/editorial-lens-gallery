@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
+import { Linkedin, Github } from "lucide-react";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 
 const Index = () => {
@@ -56,6 +57,28 @@ const Index = () => {
           <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
             Hi! I'm Jordan, an independent artist and designer specializing in brand identity, illustration, and visual design. I help brands tell their stories through thoughtful, distinctive creative work.
           </p>
+        </div>
+
+        {/* Social Links - Bottom Right */}
+        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-col gap-3">
+          <a
+            href="https://www.linkedin.com/in/vininovack"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/10 text-foreground hover:bg-background/40 transition-colors"
+          >
+            <Linkedin size={18} />
+            <span className="text-sm font-medium">Vinícius Jimenez Novack</span>
+          </a>
+          <a
+            href="https://github.com/ViniNovack"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/10 text-foreground hover:bg-background/40 transition-colors"
+          >
+            <Github size={18} />
+            <span className="text-sm font-medium">ViniNovack</span>
+          </a>
         </div>
       </section>
     </Layout>
