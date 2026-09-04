@@ -47,7 +47,7 @@ const Contact = () => {
             {/* Location */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <p className="text-label mb-2">Based in</p>
-              <p className="text-lg">São Paulo, Brazil</p>
+              <p className="text-lg">Curitiba, Brasil</p>
             </div>
           </div>
 
