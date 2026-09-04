@@ -55,7 +55,12 @@ const Index = () => {
         {/* Bio - Bottom Left */}
         <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
           <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
-            Hi! I'm Jordan, an independent artist and designer specializing in brand identity, illustration, and visual design. I help brands tell their stories through thoughtful, distinctive creative work.
+            Olá, seja bem-vindo ao meu portfólio! 👋
+            Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+
+            Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+
+            Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
           </p>
         </div>
 
