@@ -27,27 +27,18 @@ const Index = () => {
         onMouseMove={handleMouseMove}
         className="relative h-screen overflow-hidden"
       >
-        {/* Image Grid Background with Parallax - 4 columns x 2 rows */}
+        {/* Workspace Background Image with Parallax */}
         <div 
-          className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
+          className="absolute inset-[-40px] transition-transform duration-700 ease-out"
           style={{
-            transform: `translate(${-mousePosition.x * 40}px, ${-mousePosition.y * 40}px)`,
+            transform: `translate(${-mousePosition.x * 30}px, ${-mousePosition.y * 30}px) scale(1.05)`,
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 p-12 md:p-16 w-full max-w-7xl">
-            {gridImages.map((image, index) => (
-              <div 
-                key={index}
-                className="aspect-[3/4] overflow-hidden"
-              >
-                <img
-                  src={image}
-                  alt=""
-                  className="w-full h-full object-cover opacity-60"
-                />
-              </div>
-            ))}
-          </div>
+          <img
+            src={workspaceAsset.url}
+            alt="Workspace setup"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Overlay for better text readability */}
