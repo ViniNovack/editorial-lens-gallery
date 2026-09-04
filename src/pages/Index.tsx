@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
+import { Linkedin, Github } from "lucide-react";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 
 const Index = () => {
