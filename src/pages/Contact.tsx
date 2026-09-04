@@ -24,7 +24,8 @@ const Contact = () => {
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
                 <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>hello@jordanstudio.com</span>
+                <span>vininomn@gmail.com
+</span>
               </a>
 
               <a
