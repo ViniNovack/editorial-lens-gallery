@@ -60,12 +60,12 @@ const Index = () => {
         </div>
 
         {/* Social Links - Bottom Right */}
-        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-col gap-3">
+        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-row gap-3">
           <a
             href="https://www.linkedin.com/in/vininovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/10 text-foreground hover:bg-background/40 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors"
           >
             <Linkedin size={18} />
             <span className="text-sm font-medium">Vinícius Jimenez Novack</span>
@@ -74,7 +74,7 @@ const Index = () => {
             href="https://github.com/ViniNovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-sm border border-foreground/10 text-foreground hover:bg-background/40 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors"
           >
             <Github size={18} />
             <span className="text-sm font-medium">ViniNovack</span>
