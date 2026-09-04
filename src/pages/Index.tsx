@@ -60,7 +60,7 @@ const Index = () => {
         </div>
 
         {/* Social Links - Bottom Right */}
-        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-col gap-3">
+        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-row gap-3">
           <a
             href="https://www.linkedin.com/in/vininovack"
             target="_blank"
