@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
-import workspaceAsset from "@/assets/workspace-setup.jpg.asset.json";
+import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
