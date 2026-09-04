@@ -52,18 +52,6 @@ const Index = () => {
           </h1>
         </div>
 
-        {/* Bio - Bottom Left */}
-        <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
-          <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
-            Olá, seja bem-vindo ao meu portfólio! 👋
-            Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
-
-            Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
-
-            Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
-          </p>
-        </div>
-
         {/* Social Links - Bottom Right */}
         <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-row gap-3">
           <a
@@ -92,6 +80,20 @@ const Index = () => {
             <Github size={18} />
             <span className="text-sm font-medium">ViniNovack</span>
           </a>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <section className="relative bg-background py-20 md:py-32">
+        <div className="container-wide max-w-3xl mx-auto px-6 md:px-12 text-center">
+          <p className="text-base md:text-lg font-sans text-foreground/80 leading-relaxed whitespace-pre-line">
+            Olá, seja bem-vindo ao meu portfólio! 👋
+            Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+
+            Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+
+            Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
+          </p>
         </div>
       </section>
     </Layout>
