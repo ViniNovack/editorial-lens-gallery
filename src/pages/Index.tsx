@@ -6,9 +6,6 @@ const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Get 8 unique cover images from projects for the grid (4x2)
-  const gridImages = projects.slice(0, 8).map(p => p.coverImage);
-
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
     
