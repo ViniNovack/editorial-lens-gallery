@@ -1,20 +1,15 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
-  hideFooter?: boolean;
   noPadding?: boolean;
-  showEchelonFooter?: boolean;
   headerRevealMode?: boolean;
 }
 
 export function Layout({ 
   children, 
-  hideFooter = false, 
   noPadding = false,
-  showEchelonFooter = false,
   headerRevealMode = false,
 }: LayoutProps) {
   return (
@@ -23,9 +18,6 @@ export function Layout({
       <main className={`flex-1 ${noPadding ? '' : 'pt-20 md:pt-24'}`}>
         {children}
       </main>
-      {!hideFooter && (
-        <Footer variant={showEchelonFooter ? "echelon" : "default"} />
-      )}
     </div>
   );
 }

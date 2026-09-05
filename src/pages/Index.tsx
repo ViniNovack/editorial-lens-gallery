@@ -22,7 +22,7 @@ const Index = () => {
   };
 
   return (
-    <Layout hideFooter noPadding>
+    <Layout noPadding>
       <section 
         ref={containerRef}
         onMouseMove={handleMouseMove}

@@ -3,7 +3,7 @@ import { Mail, Phone, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
-    <Layout showEchelonFooter>
+    <Layout>
       <section className="container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}

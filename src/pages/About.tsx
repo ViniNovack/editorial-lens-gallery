@@ -10,7 +10,7 @@ const clients = [
 
 const About = () => {
   return (
-    <Layout showEchelonFooter>
+    <Layout>
       <section className="container-wide py-16 md:py-24">
         <div className="max-w-3xl space-y-12">
           {/* Content */}

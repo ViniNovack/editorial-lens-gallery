@@ -12,7 +12,7 @@ const Project = () => {
   }
 
   return (
-    <Layout noPadding headerRevealMode showEchelonFooter>
+    <Layout noPadding headerRevealMode>
       {/* Hero - Full Screen */}
       <section className="relative h-screen overflow-hidden">
         <img

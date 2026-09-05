@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 const Work = () => {
   return (
-    <Layout showEchelonFooter>
+    <Layout>
       {/* Header */}
       <section className="container-wide pt-16 md:pt-24 pb-16 md:pb-20">
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
