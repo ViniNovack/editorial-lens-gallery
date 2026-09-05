@@ -52,23 +52,23 @@
 
   .dark {
     /* Dark theme - deep blue/near-black */
-    --background: 220 40% 4%;
+    --background: 225 45% 9%;
     --foreground: 0 0% 100%;
 
-    --card: 220 35% 7%;
+    --card: 225 40% 13%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 220 35% 7%;
+    --popover: 225 40% 13%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 217 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 30% 12%;
+    --secondary: 225 35% 17%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 30% 15%;
-    --muted-foreground: 220 20% 65%;
+    --muted: 225 35% 20%;
+    --muted-foreground: 220 25% 70%;
 
     --accent: 210 100% 60%;
     --accent-foreground: 0 0% 100%;
@@ -76,22 +76,22 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 18%;
-    --input: 220 25% 18%;
+    --border: 225 30% 24%;
+    --input: 225 30% 24%;
     --ring: 217 90% 55%;
 
     /* Custom tokens */
-    --hover-bg: 220 30% 10%;
-    --separator: 220 25% 15%;
+    --hover-bg: 225 35% 15%;
+    --separator: 225 30% 20%;
 
     /* Sidebar */
-    --sidebar-background: 220 40% 5%;
+    --sidebar-background: 225 45% 10%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 217 90% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent: 225 35% 17%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 25% 15%;
+    --sidebar-border: 225 30% 20%;
     --sidebar-ring: 217 90% 55%;
   }
 
