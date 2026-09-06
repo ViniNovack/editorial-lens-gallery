@@ -7,25 +7,19 @@ import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
 const RevealText = ({
   children,
-  progress,
-  start,
-  end,
   className,
+  delay = 0,
 }: {
   children: React.ReactNode;
-  progress: ReturnType<typeof useScroll>["scrollYProgress"];
-  start: number;
-  end: number;
   className?: string;
+  delay?: number;
 }) => {
-  const opacity = useTransform(progress, [start, end], [0, 1]);
-  const y = useTransform(progress, [start, end], [50, 0]);
-  const blur = useTransform(progress, [start, end], [12, 0]);
-  const filter = useMotionTemplate`blur(${blur}px)`;
-
   return (
     <motion.div
-      style={{ opacity, y, filter }}
+      initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-10% 0px" }}
+      transition={{ duration: 0.7, ease: "easeOut", delay }}
       className={className}
     >
       {children}
