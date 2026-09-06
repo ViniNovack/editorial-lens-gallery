@@ -1,7 +1,31 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
+import { motion } from "framer-motion";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
+import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
+
+const RevealText = ({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-10% 0px" }}
+      transition={{ duration: 0.7, ease: "easeOut", delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -45,6 +69,9 @@ const Index = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-background/30" />
 
+        {/* Gradient blend into the welcome section */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-background/50 to-background z-[5] pointer-events-none" />
+
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-foreground text-center px-4">
@@ -80,16 +107,51 @@ const Index = () => {
       </section>
 
       {/* Welcome Section */}
-      <section className="relative bg-background py-20 md:py-32">
-        <div className="container-wide max-w-3xl mx-auto px-6 md:px-12 text-center">
-          <p className="text-base md:text-lg font-sans text-foreground/80 leading-relaxed whitespace-pre-line">
-            Olá, seja bem-vindo ao meu portfólio! 👋
-            Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+      <section
+        className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={welcomeBgAsset.url}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/40" />
+          {/* Blend edges with surrounding sections */}
+          <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-background to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-background to-transparent" />
+        </div>
 
-            Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+        {/* Glass Panel */}
+        <div className="relative z-10 container-wide flex justify-center px-6">
+          <div className="max-w-4xl w-full bg-background/20 backdrop-blur-md border border-foreground/10 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
+            <RevealText className="mb-6" delay={0}>
+              <h2 className="text-2xl md:text-4xl font-bold text-white text-center">
+                Olá, seja bem-vindo ao meu portfólio! 👋
+              </h2>
+            </RevealText>
 
-            Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
-          </p>
+            <div className="space-y-5 text-base md:text-lg font-sans text-white/85 leading-relaxed text-center">
+              <RevealText delay={0.15}>
+                <p>
+                  Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+                </p>
+              </RevealText>
+
+              <RevealText delay={0.3}>
+                <p>
+                  Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+                </p>
+              </RevealText>
+
+              <RevealText delay={0.45}>
+                <p>
+                  Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho! 🚀
+                </p>
+              </RevealText>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
