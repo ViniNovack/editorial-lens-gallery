@@ -51,6 +51,12 @@ const Contact = () => {
                 <span>ViniNovack</span>
               </a>
             </div>
+
+            {/* Location */}
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <p className="text-label mb-2">Local</p>
+              <p className="text-lg">Curitiba, Brasil</p>
+            </div>
           </div>
 
           {/* Image */}
