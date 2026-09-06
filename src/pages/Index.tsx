@@ -1,8 +1,37 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
+
+const RevealText = ({
+  children,
+  progress,
+  start,
+  end,
+  className,
+}: {
+  children: React.ReactNode;
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+  start: number;
+  end: number;
+  className?: string;
+}) => {
+  const opacity = useTransform(progress, [start, end], [0, 1]);
+  const y = useTransform(progress, [start, end], [50, 0]);
+  const blur = useTransform(progress, [start, end], [12, 0]);
+  const filter = useMotionTemplate`blur(${blur}px)`;
+
+  return (
+    <motion.div
+      style={{ opacity, y, filter }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
