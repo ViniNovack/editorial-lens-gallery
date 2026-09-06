@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
+import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
