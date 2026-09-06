@@ -120,7 +120,7 @@ const Index = () => {
       {/* Welcome Section */}
       <section
         ref={welcomeRef}
-        className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden"
+        className="relative min-h-[120vh] py-24 md:py-40 overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0">
