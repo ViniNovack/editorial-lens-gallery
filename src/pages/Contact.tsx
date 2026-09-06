@@ -36,10 +36,7 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <a
-                href="mailto:vininomn@gmail.com"
-                className="flex items-center gap-4 text-lg hover-highlight group"
-              >
+              <a href="mailto:vininomn@gmail.com" className="flex items-center gap-4 text-lg hover-highlight group">
                 <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                 <span>vininomn@gmail.com</span>
               </a>
