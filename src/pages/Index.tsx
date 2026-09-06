@@ -39,7 +39,7 @@ const Index = () => {
   const welcomeRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: welcomeRef,
-    offset: ["start 0.9", "start 0.1"],
+    offset: ["start 0.95", "end 0.3"],
   });
 
   const handleMouseMove = (e: React.MouseEvent) => {
