@@ -118,7 +118,10 @@ const Index = () => {
       </section>
 
       {/* Welcome Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section
+        ref={welcomeRef}
+        className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden"
+      >
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -135,16 +138,36 @@ const Index = () => {
         {/* Glass Panel */}
         <div className="relative z-10 container-wide flex justify-center px-6">
           <div className="max-w-4xl w-full bg-background/20 backdrop-blur-md border border-foreground/10 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
-            <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 text-center">
-              Olá, seja bem-vindo ao meu portfólio! 👋
-            </h2>
-            <p className="text-base md:text-lg font-sans text-white/85 leading-relaxed text-center whitespace-pre-line">
-              Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+            <RevealText
+              progress={scrollYProgress}
+              start={0}
+              end={0.25}
+              className="mb-6"
+            >
+              <h2 className="text-2xl md:text-4xl font-bold text-white text-center">
+                Olá, seja bem-vindo ao meu portfólio! 👋
+              </h2>
+            </RevealText>
 
-              Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+            <div className="space-y-5 text-base md:text-lg font-sans text-white/85 leading-relaxed text-center">
+              <RevealText progress={scrollYProgress} start={0.15} end={0.40}>
+                <p>
+                  Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+                </p>
+              </RevealText>
 
-              Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
-            </p>
+              <RevealText progress={scrollYProgress} start={0.35} end={0.65}>
+                <p>
+                  Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+                </p>
+              </RevealText>
+
+              <RevealText progress={scrollYProgress} start={0.60} end={0.90}>
+                <p>
+                  Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho! 🚀
+                </p>
+              </RevealText>
+            </div>
           </div>
         </div>
       </section>
