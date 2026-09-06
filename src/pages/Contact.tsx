@@ -58,13 +58,6 @@ const Contact = () => {
               <p className="text-lg">Curitiba, Brasil</p>
             </div>
 
-            {/* Location */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <p className="text-label mb-2">Based in</p>
-              <p className="text-lg">Curitiba, Brasil</p>
-            </div>
-          </div>
-
           {/* Image */}
           <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="aspect-[4/5] bg-secondary overflow-hidden">
