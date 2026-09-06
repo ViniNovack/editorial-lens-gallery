@@ -57,7 +57,8 @@ const Contact = () => {
               <p className="text-label mb-2">Local</p>
               <p className="text-lg">Curitiba, Brasil</p>
             </div>
-
+          </div>
+          
           {/* Image */}
           <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="aspect-[4/5] bg-secondary overflow-hidden">
