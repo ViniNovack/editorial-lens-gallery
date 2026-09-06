@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
+import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -80,16 +81,31 @@ const Index = () => {
       </section>
 
       {/* Welcome Section */}
-      <section className="relative bg-background py-20 md:py-32">
-        <div className="container-wide max-w-3xl mx-auto px-6 md:px-12 text-center">
-          <p className="text-base md:text-lg font-sans text-foreground/80 leading-relaxed whitespace-pre-line">
-            Olá, seja bem-vindo ao meu portfólio! 👋
-            Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={welcomeBgAsset.url}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/40" />
+        </div>
 
-            Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+        {/* Glass Panel */}
+        <div className="relative z-10 container-wide flex justify-center px-6">
+          <div className="max-w-4xl w-full bg-background/20 backdrop-blur-md border border-foreground/10 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 text-center">
+              Olá, seja bem-vindo ao meu portfólio! 👋
+            </h2>
+            <p className="text-base md:text-lg font-sans text-white/85 leading-relaxed text-center whitespace-pre-line">
+              Este é um espaço onde compartilho um pouco sobre mim, minha trajetória e alguns dos trabalhos que venho desenvolvendo ao longo da minha formação.
 
-            Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
-          </p>
+              Aqui você poderá conhecer melhor minhas experiências, projetos e aprendizados, acompanhando um pouco da minha evolução e dos caminhos que venho construindo na área de tecnologia.
+
+              Fique à vontade para explorar a página e conhecer um pouco mais sobre o meu trabalho!🚀
+            </p>
+          </div>
         </div>
       </section>
     </Layout>
