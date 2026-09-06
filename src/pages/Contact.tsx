@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { Mail } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -40,6 +40,22 @@ const Contact = () => {
                 <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                 <span>vininomn@gmail.com</span>
               </a>
+
+              <a href="https://www.linkedin.com/in/vininovack" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
+                <Linkedin size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                <span>Vinícius Jimenez Novack</span>
+              </a>
+
+              <a href="https://github.com/ViniNovack" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
+                <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                <span>ViniNovack</span>
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <p className="text-label mb-2">Local</p>
+              <p className="text-lg">Curitiba, Brasil</p>
             </div>
 
             {/* Location */}
