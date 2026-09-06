@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { motion } from "framer-motion";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
