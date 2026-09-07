@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Mail, Linkedin, Github } from "lucide-react";
+import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 
 const Contact = () => {
   return (
@@ -63,8 +64,8 @@ const Contact = () => {
           <div className="hidden lg:block lg:sticky lg:top-24">
             <div className="aspect-[4/5] bg-secondary overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=1000&fit=crop"
-                alt="Contact"
+                src={profileAsset.url}
+                alt="Vinícius Jimenez Novack"
                 className="w-full h-full object-cover"
               />
             </div>
