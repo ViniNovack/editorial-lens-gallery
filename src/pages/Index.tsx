@@ -18,7 +18,7 @@ const RevealText = ({
     <motion.div
       initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: false, margin: "-10% 0px" }}
+      viewport={{ once: false, margin: "0px 0px -5% 0px" }}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
       className={className}
     >
