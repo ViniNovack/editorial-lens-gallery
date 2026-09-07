@@ -1,34 +1,31 @@
 import { useState, useRef } from "react";
 import { Layout } from "@/components/Layout";
 import { Linkedin, Github } from "lucide-react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionTemplate,
-  type MotionValue,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
 const RevealText = ({
   children,
   className,
-  progress,
-  range,
+  delay = 0,
 }: {
   children: React.ReactNode;
   className?: string;
-  progress: MotionValue<number>;
-  range: [number, number];
+  delay?: number;
 }) => {
-  const opacity = useTransform(progress, range, [0, 1]);
-  const y = useTransform(progress, range, [50, 0]);
-  const blur = useTransform(progress, range, [12, 0]);
-  const filter = useMotionTemplate`blur(${blur}px)`;
-
   return (
-    <motion.div style={{ opacity, y, filter }} className={className}>
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+      }}
+      viewport={{ amount: 0.4, once: false }}
+      transition={{ duration: 0.6, ease: "easeOut", delay }}
+    >
       {children}
     </motion.div>
   );
