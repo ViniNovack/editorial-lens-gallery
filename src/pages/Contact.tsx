@@ -15,6 +15,7 @@ const Contact = () => {
                 <h1 className="text-display mb-8">
                   Hello, world! 👋
                 </h1>
+              </RevealText>
               <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
                 <RevealText>
                   <p>
@@ -47,6 +48,7 @@ const Contact = () => {
                   </p>
                 </RevealText>
               </div>
+            </div>
 
             {/* Contact Info */}
             <RevealText delay={0.2} className="space-y-6">
