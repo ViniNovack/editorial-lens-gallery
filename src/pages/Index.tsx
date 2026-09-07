@@ -121,6 +121,7 @@ const Index = () => {
 
       {/* Welcome Section */}
       <section
+        ref={welcomeRef}
         className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden"
       >
         {/* Background Image */}
