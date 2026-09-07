@@ -5,32 +5,6 @@ import { RevealText } from "@/components/RevealText";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
 
-const RevealText = ({
-  children,
-  className,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}) => {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-      }}
-      viewport={{ amount: 0.1, once: false }}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
