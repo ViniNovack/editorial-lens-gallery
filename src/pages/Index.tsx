@@ -23,7 +23,7 @@ const RevealText = ({
         y: 0,
         filter: "blur(0px)",
       }}
-      viewport={{ amount: 0.4, once: false }}
+      viewport={{ amount: 0.1, once: false }}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
     >
       {children}
