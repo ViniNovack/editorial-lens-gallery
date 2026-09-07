@@ -34,12 +34,6 @@ const RevealText = ({
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
-  const welcomeRef = useRef<HTMLElement>(null);
-
-  const { scrollYProgress: welcomeProgress } = useScroll({
-    target: welcomeRef,
-    offset: ["start 0.95", "start 0.25"],
-  });
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
