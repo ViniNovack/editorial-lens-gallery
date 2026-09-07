@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Mail, Linkedin, Github } from "lucide-react";
+import { RevealText } from "@/components/RevealText";
 import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 
 const Contact = () => {
@@ -10,10 +11,12 @@ const Contact = () => {
           {/* Content */}
           <div className="space-y-12">
             <div>
-              <h1 className="text-display mb-8 animate-fade-in-up">
-                Hello, world! 👋
-              </h1>
-              <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <RevealText delay={0}>
+                <h1 className="text-display mb-8">
+                  Hello, world! 👋
+                </h1>
+              </RevealText>
+              <RevealText delay={0.1} className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground">
                 <p>
                   Sempre tive curiosidade por programação e, por ser uma pessoa que gosta de descobrir as coisas por conta própria, comecei a explorar esse universo com autonomia. Isso me fez começar a ter relações com a tecnologia antes mesmo da faculdade, pois foi nesse caminho que conheci o CS50: Introduction to Computer Science, da Universidade de Harvard, uma experiência que despertou ainda mais meu interesse pela computação e pela possibilidade de transformar problemas em soluções. Mais do que aprender programação, foi quando percebi o quanto gostava de entender a lógica por trás daquilo que estava construindo.
                 </p>
@@ -32,11 +35,11 @@ const Contact = () => {
                 <p>
                   Fora desse universo, tenho grande interesse por matemática, física, robótica e problemas lógicos, além de gostar de leitura, ciclismo, corrida e gastronomia. No fim, vejo minha trajetória como uma busca constante por aprender, experimentar e entender melhor o mundo ao meu redor. Ainda estou construindo meu caminho na tecnologia, mas tenho cada vez mais certeza de que quero continuar explorando tudo o que dados, Machine Learning e Inteligência Artificial podem tornar possível.
                 </p>
-              </div>
+              </RevealText>
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <RevealText delay={0.2} className="space-y-6">
               <a href="mailto:vininomn@gmail.com" className="flex items-center gap-4 text-lg hover-highlight group">
                 <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                 <span>vininomn@gmail.com</span>
@@ -51,13 +54,13 @@ const Contact = () => {
                 <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                 <span>ViniNovack</span>
               </a>
-            </div>
+            </RevealText>
 
             {/* Location */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <RevealText delay={0.3}>
               <p className="text-label mb-2">Local</p>
               <p className="text-lg">Curitiba, Brasil</p>
-            </div>
+            </RevealText>
           </div>
 
           {/* Image */}
