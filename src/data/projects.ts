@@ -88,13 +88,20 @@ Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. To
     ],
   },
   {
-    id: "mystic-arcana",
-    title: "Mystic Arcana",
-    category: "Fine Art",
-    tags: ["FINE ART", "ILLUSTRATION"],
-    year: "2024",
-    client: "Digital Arts Foundation",
-    description: "A delicate study of Art Nouveau tarot imagery, blending traditional illustration with contemporary botanical arrangements and spiritual symbolism.",
+    id: "geoapp",
+    title: "GeoApp",
+    category: "Aplicativo Educacional",
+    tags: ["DEV", "FRONTEND", "EDUCAÇÃO"],
+    year: "2026",
+    client: "PUCPR",
+    tools: ["JAVA"],
+    github: "https://github.com/ViniNovack/Geoapp",
+    youtube: "https://youtu.be/hCVdKhzTnA4?si=uliohF95KZU_Svep",
+    description: `O aplicativo foi desenvolvido com o objetivo de auxiliar estudantes do ensino fundamental e médio na memorização e compreensão de fórmulas de geometria. A proposta surgiu a partir da percepção de que muitos alunos encontram dificuldades para lembrar as fórmulas durante os estudos e na resolução de exercícios, tornando o processo de aprendizagem menos eficiente.
+
+Para atender a essa necessidade, foi criada uma aplicação que reúne as principais fórmulas de geometria em um ambiente organizado, permitindo consultas rápidas durante o estudo. Além disso, o aplicativo conta com um questionário interativo para estimular a memorização por meio da prática, bem como ferramentas para o cálculo de áreas e volumes das principais figuras geométricas. Como diferencial, grande parte das fórmulas é acompanhada de suas respectivas deduções matemáticas, possibilitando que o usuário compreenda sua origem e aprofunde seus conhecimentos, em vez de apenas memorizar os resultados.
+
+O desenvolvimento foi realizado utilizando o Processing 4, ambiente baseado na linguagem Java, proporcionando experiência prática na linguagem e no desenvolvimento de aplicações desktop. Durante o projeto, também utilizamos inteligência artificial, por meio de engenharia de prompt, para apoiar melhorias no design da interface, na qualidade da implementação e na avaliação de diferentes soluções técnicas ao longo do desenvolvimento.`,
     coverImage: tarotCards,
     images: [tarotCards],
   },

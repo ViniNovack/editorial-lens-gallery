@@ -10,6 +10,7 @@ const brandIconSlugs: Record<string, string> = {
   HTML: "html5",
   CSS: "css",
   JAVASCRIPT: "javascript",
+  JAVA: "java",
 };
 
 // Ícones genéricos para ferramentas/conceitos sem uma logo única
