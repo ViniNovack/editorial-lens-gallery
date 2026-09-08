@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 const brandIconSlugs: Record<string, string> = {
   PYTHON: "python",
   HTML: "html5",
-  CSS: "css3",
+  CSS: "css",
   JAVASCRIPT: "javascript",
 };
 
