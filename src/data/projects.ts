@@ -6,6 +6,7 @@ import digitalWaves from "@/assets/digital-waves.jpg";
 import abstractPaint from "@/assets/abstract-paint.jpg";
 import abstractLayers from "@/assets/abstract-layers.jpg";
 import fluidArt from "@/assets/fluid-art.jpg";
+import starWarsCoverAsset from "@/assets/star-wars-cover.png.asset.json";
 
 export interface Project {
   id: string;
