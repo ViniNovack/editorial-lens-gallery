@@ -124,13 +124,20 @@ Além dos aspectos relacionados à programação, o projeto também representou 
     images: [prismaticPortrait],
   },
   {
-    id: "digital-currents",
-    title: "Digital Currents",
-    category: "Digital Art",
-    tags: ["DIGITAL", "INSTALLATION"],
-    year: "2023",
-    client: "Neon Collective",
-    description: "Immersive digital projections capturing the flow of data and light, where human figures become conduits for streams of vibrant digital energy.",
+    id: "cronologia-dc-comics",
+    title: "Site Linha do Tempo DC Comics",
+    category: "Desenvolvimento Web",
+    tags: ["DEV", "FRONTEND", "BACKEND", "CRIATIVIDADE"],
+    year: "2026",
+    client: "PUCPR",
+    tools: ["HTML", "CSS", "JAVASCRIPT", "INTELIGÊNCIA ARTIFICIAL"],
+    github: "https://github.com/ViniNovack/cronologia_DC.github.io",
+    youtube: "https://youtu.be/CcCcA_SHiqI?si=nUOgWE2k_yCv0-jr",
+    description: `Este é um projeto pessoal desenvolvido nas horas vagas, motivado pelo meu interesse pelo universo da DC Comics. A ideia surgiu da dificuldade em encontrar uma referência organizada da cronologia das histórias e eventos publicados pela editora. Com isso, iniciei o desenvolvimento de uma plataforma que tem como objetivo reunir, em uma única linha do tempo, as principais obras da continuidade da DC, facilitando a descoberta de novas leituras e a compreensão da ordem cronológica dos acontecimentos.
+
+A aplicação oferece recursos de pesquisa e filtragem para facilitar a localização das histórias, além de disponibilizar um resumo individual para cada obra cadastrada. O projeto é desenvolvido com foco na experiência do usuário, buscando organizar um grande volume de informações de forma intuitiva e acessível.
+
+Além de representar um projeto de interesse pessoal, essa aplicação também funciona como um ambiente de experimentação para o estudo de inteligência artificial e engenharia de prompt. Durante o desenvolvimento, utilizo ferramentas como Claude e Antigravity para apoiar a implementação de funcionalidades, acelerar tarefas repetitivas e explorar diferentes abordagens de desenvolvimento. Esse processo me permite aprofundar conhecimentos sobre o uso da IA como ferramenta de engenharia, sempre mantendo a análise crítica, a validação das soluções e as decisões técnicas como parte essencial do desenvolvimento.`,
     coverImage: digitalWaves,
     images: [digitalWaves],
   },
