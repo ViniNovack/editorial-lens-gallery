@@ -73,15 +73,14 @@ const Project = () => {
 
             {/* Tags */}
             <div className="flex gap-3">
-                  {project.tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="flex items-center gap-1.5 text-sm border border-separator px-3 py-1"
-                    >
-                      <ToolIcon tool={tool} />
-                      {tool}
-                    </span>
-                  ))}
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-foreground/30 text-foreground/80"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -123,8 +122,9 @@ const Project = () => {
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="text-sm border border-separator px-3 py-1"
+                      className="flex items-center gap-1.5 text-sm border border-separator px-3 py-1"
                     >
+                      <ToolIcon tool={tool} />
                       {tool}
                     </span>
                   ))}
