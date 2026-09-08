@@ -6,6 +6,9 @@ import digitalWaves from "@/assets/digital-waves.jpg";
 import abstractPaint from "@/assets/abstract-paint.jpg";
 import abstractLayers from "@/assets/abstract-layers.jpg";
 import fluidArt from "@/assets/fluid-art.jpg";
+import cespBanner from "@/assets/cesp-banner.png";
+import cespBoxFront from "@/assets/cesp-box-front.jpg";
+import cespBoxSensors from "@/assets/cesp-box-sensors.jpg";
 import starWarsCoverAsset from "@/assets/star-wars-cover.png.asset.json";
 import starWarsHeroAsset from "@/assets/star-wars-hero.png.asset.json";
 import starWarsHover from "@/assets/star-wars-hover.png";
@@ -53,8 +56,12 @@ export const projects: Project[] = [
 Os dados coletados pelos sensores são processados por um ESP32, que atua como controlador do sistema, realizando a aquisição das informações e disponibilizando-as para processamento. A partir desses dados, o sistema calcula a concentração aproximada de CO₂ presente no ambiente e estima a quantidade de árvores necessária para compensar essa concentração, permitindo ao usuário compreender de forma prática o impacto ambiental observado.
 
 Para tornar a visualização das informações mais intuitiva, foi desenvolvido um site responsável por apresentar todos os dados coletados e calculados de maneira interativa e dinâmica. Durante o desenvolvimento da aplicação, utilizamos ferramentas de inteligência artificial, para acelerar a implementação de funcionalidades, aprimorar a qualidade do código e aumentar a produtividade da equipe, mantendo as decisões técnicas e a validação das soluções sob responsabilidade dos desenvolvedores.`,
-    coverImage: neonPortrait,
-    images: [neonPortrait],
+    coverImage: cespBanner,
+    hoverImage: cespBanner,
+    images: [
+      cespBanner,
+      [cespBoxFront, cespBoxSensors],
+    ],
   },
   {
     id: "batalha-naval-star-wars",
