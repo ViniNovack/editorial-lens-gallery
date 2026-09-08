@@ -140,40 +140,41 @@ const Project = () => {
                 </div>
               </RevealText>
             )}
-          </div>
 
-              {project.github && (
+            {project.github && (
               <RevealText>
                 <div>
                   <p className="text-label mb-2">Repositório</p>
-                  
+                  <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover-highlight group"
-                  <a>
-                    <Github size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    className="flex items-center gap-4 text-lg hover-highlight group"
+                  >
+                    <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                     <span>GitHub</span>
                   </a>
                 </div>
               </RevealText>
             )}
+
             {project.youtube && (
               <RevealText>
                 <div>
                   <p className="text-label mb-2">Vídeo</p>
-                  
+                  <a
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 hover-highlight group"
-                  <a>
-                    <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    className="flex items-center gap-4 text-lg hover-highlight group"
+                  >
+                    <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                     <span>YouTube</span>
                   </a>
                 </div>
               </RevealText>
             )}
+          </div>
 
           {/* Description */}
           <div className="md:col-span-2 space-y-6">
