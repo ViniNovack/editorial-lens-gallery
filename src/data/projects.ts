@@ -57,8 +57,8 @@ Para enriquecer a jogabilidade, foram implementados diálogos dinâmicos que var
 O desenvolvimento foi realizado integralmente em Python, com execução em ambiente de terminal, permitindo aprofundar conhecimentos na linguagem e na construção de aplicações baseadas em interface textual. Durante o projeto, utilizamos inteligência artificial, para auxiliar na criação das artes em ASCII e na geração de trechos repetitivos de código, aumentando a produtividade da equipe e permitindo maior dedicação aos aspectos criativos e à lógica do jogo.
 
 Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. Todo o roteiro, os diálogos e a construção da história foram idealizados e escritos por mim de forma autoral, buscando integrar os elementos clássicos da franquia à mecânica do jogo e proporcionar uma experiência dinâmica e imersiva para o jogador.`,
-    coverImage: lightSilhouette,
-    images: [lightSilhouette],
+    coverImage: starWarsCoverAsset.url,
+    images: [starWarsCoverAsset.url],
   },
   {
     id: "mystic-arcana",
