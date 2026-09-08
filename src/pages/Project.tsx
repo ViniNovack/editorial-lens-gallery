@@ -182,6 +182,32 @@ const Project = () => {
                 </div>
               </RevealText>
             )}
+
+            {project.demonstrations && project.demonstrations.length > 0 && (
+              <RevealText>
+                <div>
+                  <p className="text-label mb-2">Demonstrações</p>
+                  <div className="space-y-3">
+                    {project.demonstrations.map((demo, index) => (
+                      <a
+                        key={index}
+                        href={demo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open(demo.url, "_blank", "noopener,noreferrer");
+                        }}
+                        className="flex items-center gap-4 text-lg hover-highlight group"
+                      >
+                        <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                        <span>{demo.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </RevealText>
+            )}
           </div>
 
           {/* Description */}
