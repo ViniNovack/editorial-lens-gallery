@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
 
@@ -58,15 +58,18 @@ const Project = () => {
           {/* Details */}
           <div className="space-y-8">
             <div>
-              <p className="text-label mb-2">Client</p>
-              <p>{project.client}</p>
+              <p className="text-label mb-2">Instituição</p>
+              <div className="flex items-center gap-2">
+                <GraduationCap size={18} className="text-muted-foreground" />
+                <p>{project.client}</p>
+              </div>
             </div>
             <div>
-              <p className="text-label mb-2">Year</p>
+              <p className="text-label mb-2">Ano</p>
               <p>{project.year}</p>
             </div>
             <div>
-              <p className="text-label mb-2">Categories</p>
+              <p className="text-label mb-2">Categorias</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
@@ -78,6 +81,21 @@ const Project = () => {
                 ))}
               </div>
             </div>
+            {project.tools && project.tools.length > 0 && (
+              <div>
+                <p className="text-label mb-2">Ferramentas</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="text-sm border border-separator px-3 py-1"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Description */}

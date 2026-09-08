@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   year: string;
   client: string;
+  tools?: string[];
   description: string;
   coverImage: string;
   images: string[];
@@ -26,7 +27,8 @@ export const projects: Project[] = [
     category: "Sistemas Ciberfísicos",
     tags: ["CIBERFÍSICO", "DADOS", "FRONT-END"],
     year: "2026",
-    client: "Gallery Moderne",
+    client: "PUCPR",
+    tools: ["PYTHON", "SQL", "HTML", "CSS", "JAVASCRIPT", "INTELIGÊNCIA ARTIFICIAL"],
     description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
     coverImage: neonPortrait,
     images: [neonPortrait],
