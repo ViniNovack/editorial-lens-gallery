@@ -7,6 +7,8 @@ import abstractPaint from "@/assets/abstract-paint.jpg";
 import abstractLayers from "@/assets/abstract-layers.jpg";
 import fluidArt from "@/assets/fluid-art.jpg";
 import starWarsCoverAsset from "@/assets/star-wars-cover.png.asset.json";
+import certificadoAsset from "@/assets/certificado-batalha-naval.png.asset.json";
+import equipeAsset from "@/assets/equipe-batalha-naval.png.asset.json";
 
 export interface Project {
   id: string;
@@ -20,7 +22,7 @@ export interface Project {
   youtube?: string;
   description: string;
   coverImage: string;
-  images: string[];
+  images: (string | string[])[];
 }
 
 export const projects: Project[] = [
@@ -58,7 +60,11 @@ O desenvolvimento foi realizado integralmente em Python, com execução em ambie
 
 Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. Todo o roteiro, os diálogos e a construção da história foram idealizados e escritos por mim de forma autoral, buscando integrar os elementos clássicos da franquia à mecânica do jogo e proporcionar uma experiência dinâmica e imersiva para o jogador.`,
     coverImage: starWarsCoverAsset.url,
-    images: [starWarsCoverAsset.url],
+    images: [
+      [certificadoAsset.url, equipeAsset.url],
+      starWarsCoverAsset.url,
+      [certificadoAsset.url, equipeAsset.url],
+    ],
   },
   {
     id: "mystic-arcana",
