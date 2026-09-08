@@ -8,6 +8,7 @@ import abstractLayers from "@/assets/abstract-layers.jpg";
 import fluidArt from "@/assets/fluid-art.jpg";
 import starWarsCoverAsset from "@/assets/star-wars-cover.png.asset.json";
 import starWarsHeroAsset from "@/assets/star-wars-hero.png.asset.json";
+import starWarsHover from "@/assets/star-wars-hover.png";
 import certificadoAsset from "@/assets/certificado-batalha-naval.png.asset.json";
 import equipeAsset from "@/assets/equipe-batalha-naval.png.asset.json";
 
@@ -29,6 +30,7 @@ export interface Project {
   demonstrations?: Demonstration[];
   description: string;
   coverImage: string;
+  hoverImage?: string;
   images: (string | string[])[];
 }
 
@@ -71,7 +73,8 @@ Para enriquecer a jogabilidade, foram implementados diálogos dinâmicos que var
 O desenvolvimento foi realizado integralmente em Python, com execução em ambiente de terminal, permitindo aprofundar conhecimentos na linguagem e na construção de aplicações baseadas em interface textual. Durante o projeto, utilizamos inteligência artificial, para auxiliar na criação das artes em ASCII e na geração de trechos repetitivos de código, aumentando a produtividade da equipe e permitindo maior dedicação aos aspectos criativos e à lógica do jogo.
 
 Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. Todo o roteiro, os diálogos e a construção da história foram idealizados e escritos por mim de forma autoral, buscando integrar os elementos clássicos da franquia à mecânica do jogo e proporcionar uma experiência dinâmica e imersiva para o jogador.`,
-    coverImage: starWarsHeroAsset.url,
+    coverImage: starWarsHover,
+    hoverImage: starWarsHover,
     images: [
       starWarsCoverAsset.url,
       [certificadoAsset.url, equipeAsset.url],

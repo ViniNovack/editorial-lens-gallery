@@ -21,7 +21,7 @@ const About = () => {
             title={project.title}
             tags={project.tags}
             year={project.year}
-            image={project.coverImage}
+            image={project.hoverImage || project.coverImage}
             index={index}
           />
         ))}
