@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, GraduationCap, Database, Brain, Github, Youtube } from "lucide-react";
+import { ArrowLeft, GraduationCap, Database, Brain, Github, Youtube, Coffee } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { projects } from "@/data/projects";
@@ -10,13 +10,13 @@ const brandIconSlugs: Record<string, string> = {
   HTML: "html5",
   CSS: "css",
   JAVASCRIPT: "javascript",
-  JAVA: "java",
 };
 
 // Ícones genéricos para ferramentas/conceitos sem uma logo única
 const genericIcons: Record<string, typeof Database> = {
   SQL: Database,
   "INTELIGÊNCIA ARTIFICIAL": Brain,
+  JAVA: Coffee,
 };
 
 const ToolIcon = ({ tool }: { tool: string }) => {
