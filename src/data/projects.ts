@@ -15,6 +15,8 @@ export interface Project {
   year: string;
   client: string;
   tools?: string[];
+  github?: string;
+  youtube?: string;
   description: string;
   coverImage: string;
   images: string[];
@@ -45,6 +47,8 @@ Para tornar a visualização das informações mais intuitiva, foi desenvolvido 
     year: "2026",
     client: "PUCPR",
     tools: ["PYTHON"],
+    github: "https://github.com/ViniNovack/Star_Wars-Batalha-Naval",
+    youtube: "https://youtu.be/MypyOYpI6LI?si=4-hmDq9H5NDxS2N1",
     description: `O projeto consistiu no desenvolvimento de uma adaptação do clássico jogo Batalha Naval, totalmente tematizada no universo de Star Wars. O jogador pode escolher entre duas perspectivas da história: Império Galáctico ou Aliança Rebelde, o que influencia a narrativa apresentada durante a partida e torna a experiência mais imersiva.
 
 Para enriquecer a jogabilidade, foram implementados diálogos dinâmicos que variam de forma aleatória conforme o contexto da partida, fazendo com que cada sessão apresente interações diferentes. O jogo também utiliza artes em ASCII e trilhas sonoras inspiradas na franquia Star Wars para criar uma experiência mais envolvente, além de contar com dois desfechos distintos, determinados pelo resultado obtido pelo jogador.

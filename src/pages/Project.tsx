@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, GraduationCap, Database, Brain } from "lucide-react";
+import { ArrowLeft, GraduationCap, Database, Brain, Github, Youtube } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { projects } from "@/data/projects";
@@ -141,6 +141,39 @@ const Project = () => {
               </RevealText>
             )}
           </div>
+
+              {project.github && (
+              <RevealText>
+                <div>
+                  <p className="text-label mb-2">Repositório</p>
+                  
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover-highlight group"
+                  >
+                    <Github size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </RevealText>
+            )}
+            {project.youtube && (
+              <RevealText>
+                <div>
+                  <p className="text-label mb-2">Vídeo</p>
+                  
+                    href={project.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover-highlight group"
+                  >
+                    <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>YouTube</span>
+                  </a>
+                </div>
+              </RevealText>
+            )}
 
           {/* Description */}
           <div className="md:col-span-2 space-y-6">
