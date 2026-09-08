@@ -37,14 +37,14 @@ export const projects: Project[] = [
     id: "cesp",
     title: "Carbon Emissions Solution Plan (CEsp)",
     category: "Sistemas Ciberfísicos",
-    tags: ["CIBERFÍSICO", "DADOS", "FRONT-END"],
+    tags: ["CIBERFÍSICO", "DADOS", "FRONT-END", "INOVAÇÃO"],
     year: "2026",
     client: "PUCPR",
     tools: ["PYTHON", "SQL", "HTML", "CSS", "JAVASCRIPT", "INTELIGÊNCIA ARTIFICIAL"],
     demonstrations: [
-      { label: "Demonstração 1", url: "https://youtu.be/0aMfXd0QXBA?si=biUxHwbFQVD0xI1m" },
-      { label: "Demonstração 2", url: "https://youtu.be/Cp38IOcQFeU?si=6oF7MbjI3ORUxZXY" },
-      { label: "Demonstração 3", url: "https://youtu.be/yd_mg0r41ZQ?si=l5GwU2rzgtbzrU3k" },
+      { label: "CEsp em Prática", url: "https://youtu.be/0aMfXd0QXBA?si=biUxHwbFQVD0xI1m" },
+      { label: "Site do CEsp", url: "https://youtu.be/Cp38IOcQFeU?si=6oF7MbjI3ORUxZXY" },
+      { label: "Apresentação Criativa", url: "https://youtu.be/yd_mg0r41ZQ?si=l5GwU2rzgtbzrU3k" },
     ],
     description: `O projeto foi desenvolvido a partir da necessidade de facilitar a medição da concentração de CO₂ em ambientes fechados, oferecendo uma forma simples e acessível de monitorar a qualidade do ar. Para atender a esse objetivo, a equipe projetou e construiu uma caixa equipada com dois sensores: um sensor de concentração de gases e um sensor responsável pela medição da temperatura e da pressão atmosférica.
 

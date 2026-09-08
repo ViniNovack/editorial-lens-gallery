@@ -156,7 +156,7 @@ const Project = () => {
                     className="flex items-center gap-4 text-lg hover-highlight group"
                   >
                     <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                    <span>GitHub</span>
+                    <span>Repositório</span>
                   </a>
                 </div>
               </RevealText>
@@ -165,7 +165,7 @@ const Project = () => {
             {project.youtube && (
               <RevealText>
                 <div>
-                  <p className="text-label mb-2">Vídeo</p>
+                  <p className="text-label mb-2">Demonstração</p>
                   <a
                     href={project.youtube}
                     target="_blank"
@@ -177,7 +177,7 @@ const Project = () => {
                     className="flex items-center gap-4 text-lg hover-highlight group"
                   >
                     <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                    <span>YouTube</span>
+                    <span>Demonstração</span>
                   </a>
                 </div>
               </RevealText>
