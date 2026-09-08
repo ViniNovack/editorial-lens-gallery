@@ -60,7 +60,11 @@ O desenvolvimento foi realizado integralmente em Python, com execução em ambie
 
 Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. Todo o roteiro, os diálogos e a construção da história foram idealizados e escritos por mim de forma autoral, buscando integrar os elementos clássicos da franquia à mecânica do jogo e proporcionar uma experiência dinâmica e imersiva para o jogador.`,
     coverImage: starWarsCoverAsset.url,
-    images: [starWarsCoverAsset.url],
+    images: [
+      [certificadoAsset.url, equipeAsset.url],
+      starWarsCoverAsset.url,
+      [certificadoAsset.url, equipeAsset.url],
+    ],
   },
   {
     id: "mystic-arcana",
