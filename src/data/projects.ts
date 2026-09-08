@@ -24,7 +24,7 @@ export const projects: Project[] = [
     id: "cesp",
     title: "Carbon Emissions Solution Plan (CEsp)",
     category: "Sistemas Ciberfísicos",
-    tags: ["CIBERFÍSICO", "DADOS", "FRONT-END", "EMBARCADOS"],
+    tags: ["CIBERFÍSICO", "DADOS", "FRONT-END"],
     year: "2026",
     client: "Gallery Moderne",
     description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
