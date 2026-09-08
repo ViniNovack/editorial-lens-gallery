@@ -29,7 +29,11 @@ export const projects: Project[] = [
     year: "2026",
     client: "PUCPR",
     tools: ["PYTHON", "SQL", "HTML", "CSS", "JAVASCRIPT", "INTELIGÊNCIA ARTIFICIAL"],
-    description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
+    description: `O projeto foi desenvolvido a partir da necessidade de facilitar a medição da concentração de CO₂ em ambientes fechados, oferecendo uma forma simples e acessível de monitorar a qualidade do ar. Para atender a esse objetivo, a equipe projetou e construiu uma caixa equipada com dois sensores: um sensor de concentração de gases e um sensor responsável pela medição da temperatura e da pressão atmosférica.
+
+Os dados coletados pelos sensores são processados por um ESP32, que atua como controlador do sistema, realizando a aquisição das informações e disponibilizando-as para processamento. A partir desses dados, o sistema calcula a concentração aproximada de CO₂ presente no ambiente e estima a quantidade de árvores necessária para compensar essa concentração, permitindo ao usuário compreender de forma prática o impacto ambiental observado.
+
+Para tornar a visualização das informações mais intuitiva, foi desenvolvido um site responsável por apresentar todos os dados coletados e calculados de maneira interativa e dinâmica. Durante o desenvolvimento da aplicação, utilizamos ferramentas de inteligência artificial, para acelerar a implementação de funcionalidades, aprimorar a qualidade do código e aumentar a produtividade da equipe, mantendo as decisões técnicas e a validação das soluções sob responsabilidade dos desenvolvedores.`,
     coverImage: neonPortrait,
     images: [neonPortrait],
   },

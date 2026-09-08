@@ -134,10 +134,15 @@ const Project = () => {
           </div>
 
           {/* Description */}
-          <div className="md:col-span-2">
-            <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground">
-              {project.description}
-            </p>
+          <div className="md:col-span-2 space-y-6">
+            {project.description.split("\n\n").map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-xl md:text-2xl leading-relaxed text-muted-foreground"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>
