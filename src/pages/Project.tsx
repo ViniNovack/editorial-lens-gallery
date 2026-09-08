@@ -198,11 +198,24 @@ const Project = () => {
               className="image-reveal animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <img
-                src={image}
-                alt={`${project.title} - ${index + 1}`}
-                className="w-full"
-              />
+              {Array.isArray(image) ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                  {image.map((src, subIndex) => (
+                    <img
+                      key={subIndex}
+                      src={src}
+                      alt={`${project.title} - ${index + 1}.${subIndex + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={image}
+                  alt={`${project.title} - ${index + 1}`}
+                  className="w-full"
+                />
+              )}
             </div>
           ))}
         </div>
