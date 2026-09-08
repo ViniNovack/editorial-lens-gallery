@@ -22,7 +22,7 @@ export interface Project {
   youtube?: string;
   description: string;
   coverImage: string;
-  images: string[];
+  images: (string | string[])[];
 }
 
 export const projects: Project[] = [
