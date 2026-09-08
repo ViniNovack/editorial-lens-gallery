@@ -94,7 +94,7 @@ Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. To
     tags: ["DEV", "FRONTEND", "EDUCAÇÃO"],
     year: "2026",
     client: "PUCPR",
-    tools: ["JAVA"],
+    tools: ["JAVA", "INTELIGÊNCIA ARTIFICIAL"],
     github: "https://github.com/ViniNovack/Geoapp",
     youtube: "https://youtu.be/hCVdKhzTnA4?si=uliohF95KZU_Svep",
     description: `O aplicativo foi desenvolvido com o objetivo de auxiliar estudantes do ensino fundamental e médio na memorização e compreensão de fórmulas de geometria. A proposta surgiu a partir da percepção de que muitos alunos encontram dificuldades para lembrar as fórmulas durante os estudos e na resolução de exercícios, tornando o processo de aprendizagem menos eficiente.
@@ -106,13 +106,20 @@ O desenvolvimento foi realizado utilizando o Processing 4, ambiente baseado na l
     images: [tarotCards],
   },
   {
-    id: "prismatic-dreams",
-    title: "Prismatic Dreams",
-    category: "Photography",
-    tags: ["PHOTOGRAPHY", "EXPERIMENTAL"],
-    year: "2023",
-    client: "Bloom Publishing",
-    description: "Ethereal portrait series exploring identity through prismatic light distortion, creating otherworldly compositions that blur the line between reality and dream.",
+    id: "rom-retired-old-man",
+    title: "ROM-Retired-Old-Man",
+    category: "Desenvolvimento de Jogos",
+    tags: ["DEV", "FRONTEND", "BACKEND", "CRIATIVIDADE"],
+    year: "2026",
+    client: "PUCPR",
+    tools: ["CONSTRUCT 3", "INTELIGÊNCIA ARTIFICIAL"],
+    github: "https://github.com/ViniNovack/ROM-Retired-Old-Man",
+    youtube: "https://www.youtube.com/watch?v=5zuqjlvKfAw",
+    description: `O projeto consistiu no desenvolvimento de um jogo de plataforma 2D inspirado na mecânica de clássicos do gênero, como a franquia Mario. A narrativa acompanha um antigo herói que, após anos de aposentadoria em uma vila pacífica, precisa voltar à ação quando a comunidade que o acolheu é atacada por um monstro. A história foi utilizada como base para criar uma experiência envolvente e criativa para a luta contra o monstro.
+
+O desenvolvimento teve como principal objetivo aprofundar os conhecimentos em lógica de programação e na implementação de mecânicas de jogos. Durante o projeto, foram desenvolvidas funcionalidades como movimentação do personagem, detecção de colisões e sistemas de combate, incluindo barras de vida, animações de ataque e dano, movimentação do chefe (boss) e outras mecânicas fundamentais para a jogabilidade, proporcionando experiência prática na implementação de sistemas interativos e na resolução de problemas.
+
+Além dos aspectos relacionados à programação, o projeto também representou uma oportunidade para explorar o uso de inteligência artificial no processo de desenvolvimento. Os cenários e personagens foram criados com o auxílio de ferramentas de IA, permitindo experimentar técnicas de geração de ativos visuais desde a concepção inicial, além de compreender como essas tecnologias podem otimizar o processo criativo e acelerar o desenvolvimento de jogos.`,
     coverImage: prismaticPortrait,
     images: [prismaticPortrait],
   },

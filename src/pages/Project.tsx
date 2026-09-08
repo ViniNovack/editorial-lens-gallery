@@ -10,6 +10,7 @@ const brandIconSlugs: Record<string, string> = {
   HTML: "html5",
   CSS: "css",
   JAVASCRIPT: "javascript",
+  "CONSTRUCT 3": "construct3",
 };
 
 // Ícones genéricos para ferramentas/conceitos sem uma logo única
