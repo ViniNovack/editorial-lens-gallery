@@ -151,7 +151,7 @@ const Project = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover-highlight group"
-                  >
+                  <a>
                     <Github size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
                     <span>GitHub</span>
                   </a>
@@ -167,7 +167,7 @@ const Project = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover-highlight group"
-                  >
+                  <a>
                     <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
                     <span>YouTube</span>
                   </a>
