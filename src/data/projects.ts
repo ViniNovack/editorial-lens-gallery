@@ -21,11 +21,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "neon-glow",
-    title: "Neon Glow",
-    category: "Photography",
-    tags: ["PHOTOGRAPHY", "PORTRAIT"],
-    year: "2024",
+    id: "cesp",
+    title: "Carbon Emissions Solution Plan (CEsp)",
+    category: "Sistemas Ciberfísicos",
+    tags: ["CIBERFÍSICO", "DADOS", "FRONT-END", "EMBARCADOS"],
+    year: "2026",
     client: "Gallery Moderne",
     description: "A striking exploration of light and skin, capturing the ethereal beauty of neon-lit portraiture with cosmic undertones and vibrant color spectrums.",
     coverImage: neonPortrait,
