@@ -7,6 +7,8 @@ import abstractPaint from "@/assets/abstract-paint.jpg";
 import abstractLayers from "@/assets/abstract-layers.jpg";
 import fluidArt from "@/assets/fluid-art.jpg";
 import starWarsCoverAsset from "@/assets/star-wars-cover.png.asset.json";
+import certificadoAsset from "@/assets/certificado-batalha-naval.png.asset.json";
+import equipeAsset from "@/assets/equipe-batalha-naval.png.asset.json";
 
 export interface Project {
   id: string;
