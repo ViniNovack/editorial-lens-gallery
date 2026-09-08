@@ -38,13 +38,20 @@ Para tornar a visualização das informações mais intuitiva, foi desenvolvido 
     images: [neonPortrait],
   },
   {
-    id: "light-forms",
-    title: "Light Forms",
-    category: "Digital Art",
-    tags: ["DIGITAL", "EXPERIMENTAL"],
-    year: "2024",
-    client: "Tech Futures Lab",
-    description: "Exploring the intersection of human silhouette and abstract light painting. Each piece captures the dynamic tension between body and luminous energy.",
+    id: "batalha-naval-star-wars",
+    title: "Jogo Batalha Naval - Star Wars",
+    category: "Desenvolvimento de Jogos",
+    tags: ["DEV", "BACKEND", "CRIATIVIDADE"],
+    year: "2026",
+    client: "PUCPR",
+    tools: ["PYTHON"],
+    description: `O projeto consistiu no desenvolvimento de uma adaptação do clássico jogo Batalha Naval, totalmente tematizada no universo de Star Wars. O jogador pode escolher entre duas perspectivas da história: Império Galáctico ou Aliança Rebelde, o que influencia a narrativa apresentada durante a partida e torna a experiência mais imersiva.
+
+Para enriquecer a jogabilidade, foram implementados diálogos dinâmicos que variam de forma aleatória conforme o contexto da partida, fazendo com que cada sessão apresente interações diferentes. O jogo também utiliza artes em ASCII e trilhas sonoras inspiradas na franquia Star Wars para criar uma experiência mais envolvente, além de contar com dois desfechos distintos, determinados pelo resultado obtido pelo jogador.
+
+O desenvolvimento foi realizado integralmente em Python, com execução em ambiente de terminal, permitindo aprofundar conhecimentos na linguagem e na construção de aplicações baseadas em interface textual. Durante o projeto, utilizamos inteligência artificial, para auxiliar na criação das artes em ASCII e na geração de trechos repetitivos de código, aumentando a produtividade da equipe e permitindo maior dedicação aos aspectos criativos e à lógica do jogo.
+
+Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. Todo o roteiro, os diálogos e a construção da história foram idealizados e escritos por mim de forma autoral, buscando integrar os elementos clássicos da franquia à mecânica do jogo e proporcionar uma experiência dinâmica e imersiva para o jogador.`,
     coverImage: lightSilhouette,
     images: [lightSilhouette],
   },
