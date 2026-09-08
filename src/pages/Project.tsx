@@ -1,6 +1,7 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { ArrowLeft, GraduationCap, Database, Brain } from "lucide-react";
 import { Layout } from "@/components/Layout";
+import { RevealText } from "@/components/RevealText";
 import { projects } from "@/data/projects";
 
 // Ícones de marca (via Simple Icons) para ferramentas com logo oficial
@@ -91,57 +92,64 @@ const Project = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
           {/* Details */}
           <div className="space-y-8">
-            <div>
-              <p className="text-label mb-2">Instituição</p>
-              <div className="flex items-center gap-2">
-                <GraduationCap size={18} className="text-muted-foreground" />
-                <p>{project.client}</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-label mb-2">Ano</p>
-              <p>{project.year}</p>
-            </div>
-            <div>
-              <p className="text-label mb-2">Categorias</p>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-sm border border-separator px-3 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            {project.tools && project.tools.length > 0 && (
+            <RevealText>
               <div>
-                <p className="text-label mb-2">Ferramentas</p>
+                <p className="text-label mb-2">Instituição</p>
+                <div className="flex items-center gap-2">
+                  <GraduationCap size={18} className="text-muted-foreground" />
+                  <p>{project.client}</p>
+                </div>
+              </div>
+            </RevealText>
+            <RevealText>
+              <div>
+                <p className="text-label mb-2">Ano</p>
+                <p>{project.year}</p>
+              </div>
+            </RevealText>
+            <RevealText>
+              <div>
+                <p className="text-label mb-2">Categorias</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tools.map((tool) => (
+                  {project.tags.map((tag) => (
                     <span
-                      key={tool}
-                      className="flex items-center gap-1.5 text-sm border border-separator px-3 py-1"
+                      key={tag}
+                      className="text-sm border border-separator px-3 py-1"
                     >
-                      <ToolIcon tool={tool} />
-                      {tool}
+                      {tag}
                     </span>
                   ))}
                 </div>
               </div>
+            </RevealText>
+            {project.tools && project.tools.length > 0 && (
+              <RevealText>
+                <div>
+                  <p className="text-label mb-2">Ferramentas</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="flex items-center gap-1.5 text-sm border border-separator px-3 py-1"
+                      >
+                        <ToolIcon tool={tool} />
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </RevealText>
             )}
           </div>
 
           {/* Description */}
           <div className="md:col-span-2 space-y-6">
             {project.description.split("\n\n").map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-xl md:text-2xl leading-relaxed text-muted-foreground"
-              >
-                {paragraph}
-              </p>
+              <RevealText key={index}>
+                <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground">
+                  {paragraph}
+                </p>
+              </RevealText>
             ))}
           </div>
         </div>
