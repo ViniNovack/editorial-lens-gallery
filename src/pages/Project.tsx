@@ -1,7 +1,41 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, GraduationCap } from "lucide-react";
+import { ArrowLeft, GraduationCap, Database, Brain } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
+
+// Ícones de marca (via Simple Icons) para ferramentas com logo oficial
+const brandIconSlugs: Record<string, string> = {
+  PYTHON: "python",
+  HTML: "html5",
+  CSS: "css3",
+  JAVASCRIPT: "javascript",
+};
+
+// Ícones genéricos para ferramentas/conceitos sem uma logo única
+const genericIcons: Record<string, typeof Database> = {
+  SQL: Database,
+  "INTELIGÊNCIA ARTIFICIAL": Brain,
+};
+
+const ToolIcon = ({ tool }: { tool: string }) => {
+  const slug = brandIconSlugs[tool];
+  if (slug) {
+    return (
+      <img
+        src={`https://cdn.simpleicons.org/${slug}`}
+        alt=""
+        className="w-4 h-4"
+      />
+    );
+  }
+
+  const GenericIcon = genericIcons[tool];
+  if (GenericIcon) {
+    return <GenericIcon size={16} className="text-muted-foreground" />;
+  }
+
+  return null;
+};
 
 const Project = () => {
   const { id } = useParams();
@@ -39,14 +73,15 @@ const Project = () => {
 
             {/* Tags */}
             <div className="flex gap-3">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-foreground/30 text-foreground/80"
-                >
-                  {tag}
-                </span>
-              ))}
+                  {project.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="flex items-center gap-1.5 text-sm border border-separator px-3 py-1"
+                    >
+                      <ToolIcon tool={tool} />
+                      {tool}
+                    </span>
+                  ))}
             </div>
           </div>
         </div>
