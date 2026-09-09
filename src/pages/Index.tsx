@@ -45,10 +45,10 @@ const Index = () => {
         </div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/30" />
+        <div className="absolute inset-0 bg-primary/25" />
 
         {/* Gradient blend into the welcome section */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-background/50 to-background z-[5] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/30 to-background z-[5] pointer-events-none" />
 
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -97,7 +97,7 @@ const Index = () => {
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/40" />
+          <div className="absolute inset-0 bg-primary/30" />
           {/* Blend edges with surrounding sections */}
           <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-background to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-background to-transparent" />
@@ -105,7 +105,7 @@ const Index = () => {
 
         {/* Glass Panel */}
         <div className="relative z-10 container-wide flex justify-center px-6">
-          <div className="max-w-4xl w-full bg-background/20 backdrop-blur-md border border-foreground/10 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
+          <div className="max-w-4xl w-full bg-primary/15 backdrop-blur-md border border-primary/20 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
             <RevealText className="mb-6" delay={0}>
               <h2 className="text-2xl md:text-4xl font-bold text-white text-center">
                 Olá, seja bem-vindo ao meu portfólio! 👋
