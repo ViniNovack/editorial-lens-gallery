@@ -4,50 +4,50 @@
 
 @layer base {
   :root {
-    /* Light theme - stronger light blue */
-    --background: 215 70% 84%;
+    /* Light theme - soft sky blue */
+    --background: 215 55% 90%;
     --foreground: 220 60% 16%;
 
-    --card: 215 65% 86%;
+    --card: 215 50% 86%;
     --card-foreground: 220 60% 16%;
 
-    --popover: 215 65% 86%;
+    --popover: 215 50% 86%;
     --popover-foreground: 220 60% 16%;
 
-    --primary: 217 90% 40%;
+    --primary: 217 80% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 60% 80%;
+    --secondary: 215 45% 82%;
     --secondary-foreground: 220 60% 16%;
 
-    --muted: 215 55% 78%;
+    --muted: 215 40% 78%;
     --muted-foreground: 220 45% 30%;
 
-    --accent: 210 100% 45%;
+    --accent: 210 90% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 55% 72%;
-    --input: 215 55% 72%;
-    --ring: 217 90% 40%;
+    --border: 215 45% 75%;
+    --input: 215 45% 75%;
+    --ring: 217 80% 45%;
 
     --radius: 0rem;
 
     /* Custom tokens */
-    --hover-bg: 215 65% 82%;
-    --separator: 215 55% 76%;
+    --hover-bg: 215 50% 84%;
+    --separator: 215 45% 80%;
 
     /* Sidebar */
-    --sidebar-background: 215 70% 84%;
+    --sidebar-background: 215 55% 90%;
     --sidebar-foreground: 220 60% 16%;
-    --sidebar-primary: 217 90% 40%;
+    --sidebar-primary: 217 80% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 60% 80%;
+    --sidebar-accent: 215 45% 82%;
     --sidebar-accent-foreground: 220 60% 16%;
-    --sidebar-border: 215 55% 76%;
-    --sidebar-ring: 217 90% 40%;
+    --sidebar-border: 215 45% 80%;
+    --sidebar-ring: 217 80% 45%;
   }
 
   .dark {
