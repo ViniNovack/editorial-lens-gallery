@@ -24,6 +24,11 @@ import romBattle from "@/assets/rom-battle.png";
 import romVitoria from "@/assets/rom-vitoria.png";
 import romGameOver from "@/assets/rom-game-over.png";
 import romInicio from "@/assets/rom-inicio.png";
+import dcCover from "@/assets/dc-cover.png";
+import dcTimeline from "@/assets/dc-timeline.png";
+import dcIntro from "@/assets/dc-intro.png";
+import dcDetalhe from "@/assets/dc-detalhe.png";
+import dcNew52 from "@/assets/dc-new52.png";
 
 export interface Demonstration {
   label: string;
@@ -140,7 +145,7 @@ Além dos aspectos relacionados à programação, o projeto também representou 
       [romGameOver, romInicio],
     ],
   },
-  
+
   {
     id: "cronologia-dc-comics",
     title: "Site Linha do Tempo DC Comics",
@@ -156,9 +161,13 @@ Além dos aspectos relacionados à programação, o projeto também representou 
 A aplicação oferece recursos de pesquisa e filtragem para facilitar a localização das histórias, além de disponibilizar um resumo individual para cada obra cadastrada. O projeto é desenvolvido com foco na experiência do usuário, buscando organizar um grande volume de informações de forma intuitiva e acessível.
 
 Além de representar um projeto de interesse pessoal, essa aplicação também funciona como um ambiente de experimentação para o estudo de inteligência artificial e engenharia de prompt. Durante o desenvolvimento, utilizo ferramentas como Claude e Antigravity para apoiar a implementação de funcionalidades, acelerar tarefas repetitivas e explorar diferentes abordagens de desenvolvimento. Esse processo me permite aprofundar conhecimentos sobre o uso da IA como ferramenta de engenharia, sempre mantendo a análise crítica, a validação das soluções e as decisões técnicas como parte essencial do desenvolvimento.`,
-    coverImage: digitalWaves,
-    images: [digitalWaves],
+    coverImage: dcCover,
+    images: [
+      [dcTimeline, dcIntro],
+      [dcDetalhe, dcNew52],
+    ],
   },
+  
   {
     id: "chromatic-burst",
     title: "Chromatic Burst",
