@@ -45,10 +45,10 @@ const Index = () => {
         </div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-primary/25" />
+        <div className="absolute inset-0 bg-primary/20" />
 
         {/* Gradient blend into the welcome section */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/30 to-background z-[5] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/30 to-primary/50 z-[5] pointer-events-none" />
 
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
