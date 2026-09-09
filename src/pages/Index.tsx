@@ -45,10 +45,10 @@ const Index = () => {
         </div>
 
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-primary/25" />
+        <div className="absolute inset-0 bg-primary/10" />
 
         {/* Gradient blend into the welcome section */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/30 to-background z-[5] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/15 to-primary/30 z-[5] pointer-events-none" />
 
         {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -99,8 +99,8 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-primary/30" />
           {/* Blend edges with surrounding sections */}
-          <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-background to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-background to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-primary/25 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-primary/25 to-transparent" />
         </div>
 
         {/* Glass Panel */}
