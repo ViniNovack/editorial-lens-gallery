@@ -11,6 +11,8 @@ const brandIconSlugs: Record<string, string> = {
   CSS: "css",
   JAVASCRIPT: "javascript",
   "CONSTRUCT 3": "construct3",
+  MYSQL: "mysql",
+  WORKBENCH: "mysql",
 };
 
 // Ícones genéricos para ferramentas/conceitos sem uma logo única

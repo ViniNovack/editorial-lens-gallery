@@ -168,13 +168,21 @@ Além de representar um projeto de interesse pessoal, essa aplicação também f
   },
 
   {
-    id: "chromatic-burst",
-    title: "Chromatic Burst",
-    category: "Fine Art",
-    tags: ["FINE ART", "ABSTRACT"],
-    year: "2023",
-    client: "Independent",
-    description: "Bold abstract expressionism exploring raw emotion through vivid color application and dynamic brushwork on textured canvas surfaces.",
+    id: "track-manager",
+    title: "Track Manager",
+    category: "Banco de Dados",
+    tags: ["DADOS", "INOVAÇÃO"],
+    year: "2026",
+    client: "PUCPR",
+    tools: ["SQL", "MYSQL", "WORKBENCH"],
+    github: "https://github.com/ViniNovack/Banco_de_Dados_Aeroporto",
+    description: `Neste projeto, desenvolvi junto à minha equipe um banco de dados voltado ao gerenciamento da infraestrutura e das operações de um aeroporto. Em vez de seguirmos projetos mais convencionais, como lojas ou bibliotecas, decidimos trabalhar com um cenário mais complexo e desafiador: um aeroporto inspirado no Aeroporto Internacional Afonso Pena, em Curitiba.
+
+A proposta envolveu pesquisar e representar diferentes elementos desse ambiente, como pistas, pistas de táxi, hangares, portões, áreas de manobra, aeronaves, companhias e operações de rota e solo. No desenvolvimento, trabalhamos desde a modelagem conceitual e lógica até a implementação do banco em MySQL, utilizando chaves primárias e estrangeiras para estabelecer os relacionamentos entre as entidades.
+
+Um dos pontos interessantes foi perceber como um problema do mundo real pode exigir uma estrutura de dados bastante ampla. O modelo contempla, por exemplo, o relacionamento entre aeronaves e companhias, funcionários e setores, operações de rota e operações de solo, além do controle de solicitações e de terceiros.
+
+Esse projeto também me permitiu conhecer melhor o universo da aviação enquanto pesquisava informações para tornar a modelagem mais próxima da realidade. Ao mesmo tempo, pude me aprofundar justamente em uma área pela qual tenho bastante interesse: bancos de dados. Por isso, considero este um dos meus projetos favoritos, não apenas pelo resultado técnico, mas principalmente pela experiência de transformar um cenário complexo e pouco convencional em uma estrutura de dados organizada e funcional.`,
     coverImage: abstractPaint,
     images: [abstractPaint],
   }
