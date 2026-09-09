@@ -14,6 +14,11 @@ import starWarsHeroAsset from "@/assets/star-wars-hero.png.asset.json";
 import starWarsHover from "@/assets/star-wars-hover.png";
 import certificadoAsset from "@/assets/certificado-batalha-naval.png.asset.json";
 import equipeAsset from "@/assets/equipe-batalha-naval.png.asset.json";
+import geoappCover from "@/assets/geoapp-cover.png";
+import geoappHome from "@/assets/geoapp-home.png";
+import geoappTriangulo from "@/assets/geoapp-triangulo.png";
+import geoappPrisma from "@/assets/geoapp-prisma.png";
+import geoappQuestionario from "@/assets/geoapp-questionario.png";
 
 export interface Demonstration {
   label: string;
@@ -102,9 +107,13 @@ Um dos principais diferenciais do projeto foi o desenvolvimento da narrativa. To
 Para atender a essa necessidade, foi criada uma aplicação que reúne as principais fórmulas de geometria em um ambiente organizado, permitindo consultas rápidas durante o estudo. Além disso, o aplicativo conta com um questionário interativo para estimular a memorização por meio da prática, bem como ferramentas para o cálculo de áreas e volumes das principais figuras geométricas. Como diferencial, grande parte das fórmulas é acompanhada de suas respectivas deduções matemáticas, possibilitando que o usuário compreenda sua origem e aprofunde seus conhecimentos, em vez de apenas memorizar os resultados.
 
 O desenvolvimento foi realizado utilizando o Processing 4, ambiente baseado na linguagem Java, proporcionando experiência prática na linguagem e no desenvolvimento de aplicações desktop. Durante o projeto, também utilizamos inteligência artificial, por meio de engenharia de prompt, para apoiar melhorias no design da interface, na qualidade da implementação e na avaliação de diferentes soluções técnicas ao longo do desenvolvimento.`,
-    coverImage: tarotCards,
-    images: [tarotCards],
+    coverImage: geoappCover,
+    images: [
+      [geoappHome, geoappTriangulo],
+      [geoappPrisma, geoappQuestionario],
+    ],
   },
+  
   {
     id: "rom-retired-old-man",
     title: "ROM-Retired-Old-Man",
