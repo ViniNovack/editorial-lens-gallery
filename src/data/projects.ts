@@ -4,8 +4,6 @@ import tarotCards from "@/assets/tarot-cards.jpg";
 import prismaticPortrait from "@/assets/prismatic-portrait.jpg";
 import digitalWaves from "@/assets/digital-waves.jpg";
 import abstractPaint from "@/assets/abstract-paint.jpg";
-import abstractLayers from "@/assets/abstract-layers.jpg";
-import fluidArt from "@/assets/fluid-art.jpg";
 import cespBanner from "@/assets/cesp-banner.png";
 import cespBoxFront from "@/assets/cesp-box-front.jpg";
 import cespBoxSensors from "@/assets/cesp-box-sensors.jpg";
@@ -162,12 +160,13 @@ A aplicação oferece recursos de pesquisa e filtragem para facilitar a localiza
 
 Além de representar um projeto de interesse pessoal, essa aplicação também funciona como um ambiente de experimentação para o estudo de inteligência artificial e engenharia de prompt. Durante o desenvolvimento, utilizo ferramentas como Claude e Antigravity para apoiar a implementação de funcionalidades, acelerar tarefas repetitivas e explorar diferentes abordagens de desenvolvimento. Esse processo me permite aprofundar conhecimentos sobre o uso da IA como ferramenta de engenharia, sempre mantendo a análise crítica, a validação das soluções e as decisões técnicas como parte essencial do desenvolvimento.`,
     coverImage: dcCover,
+    hoverImage: dcCover,
     images: [
       [dcTimeline, dcIntro],
       [dcDetalhe, dcNew52],
     ],
   },
-  
+
   {
     id: "chromatic-burst",
     title: "Chromatic Burst",
@@ -178,27 +177,5 @@ Além de representar um projeto de interesse pessoal, essa aplicação também f
     description: "Bold abstract expressionism exploring raw emotion through vivid color application and dynamic brushwork on textured canvas surfaces.",
     coverImage: abstractPaint,
     images: [abstractPaint],
-  },
-  {
-    id: "layered-depths",
-    title: "Layered Depths",
-    category: "Fine Art",
-    tags: ["FINE ART", "MIXED MEDIA"],
-    year: "2022",
-    client: "Heritage Museum",
-    description: "Complex layered compositions merging digital and traditional techniques, creating depth through overlapping textures and complementary color harmonies.",
-    coverImage: abstractLayers,
-    images: [abstractLayers],
-  },
-  {
-    id: "fluid-dynamics",
-    title: "Fluid Dynamics",
-    category: "Fine Art",
-    tags: ["FINE ART", "EXPERIMENTAL"],
-    year: "2022",
-    client: "Art Basel",
-    description: "Mesmerizing fluid art exploring the organic flow of pigments, capturing moments of chaos and harmony in vibrant turquoise and magenta compositions.",
-    coverImage: fluidArt,
-    images: [fluidArt],
-  },
+  }
 ];
