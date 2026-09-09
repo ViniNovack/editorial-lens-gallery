@@ -7,7 +7,9 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Work from "./pages/Work";
 import Project from "./pages/Project";
-import About from "./pages/About";
+import Formacao from "./pages/Formacao";
+import School from "./pages/School";
+import Course from "./pages/Course";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -24,7 +26,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/work" element={<Work />} />
             <Route path="/work/:id" element={<Project />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/formacao" element={<Formacao />} />
+            <Route path="/formacao/:schoolId" element={<School />} />
+            <Route path="/formacao/:schoolId/:courseId" element={<Course />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
