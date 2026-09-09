@@ -3,7 +3,6 @@ import lightSilhouette from "@/assets/light-silhouette.jpg";
 import tarotCards from "@/assets/tarot-cards.jpg";
 import prismaticPortrait from "@/assets/prismatic-portrait.jpg";
 import digitalWaves from "@/assets/digital-waves.jpg";
-import abstractPaint from "@/assets/abstract-paint.jpg";
 import cespBanner from "@/assets/cesp-banner.png";
 import cespBoxFront from "@/assets/cesp-box-front.jpg";
 import cespBoxSensors from "@/assets/cesp-box-sensors.jpg";
@@ -27,6 +26,11 @@ import dcTimeline from "@/assets/dc-timeline.png";
 import dcIntro from "@/assets/dc-intro.png";
 import dcDetalhe from "@/assets/dc-detalhe.png";
 import dcNew52 from "@/assets/dc-new52.png";
+import trackCover from "@/assets/track-cover.jpg";
+import trackBanner from "@/assets/track-banner.jpg";
+import trackErFisico from "@/assets/track-er-fisico.png";
+import trackErConceitual from "@/assets/track-er-conceitual.png";
+import trackWorkbench from "@/assets/track-workbench.png";
 
 export interface Demonstration {
   label: string;
@@ -183,7 +187,10 @@ A proposta envolveu pesquisar e representar diferentes elementos desse ambiente,
 Um dos pontos interessantes foi perceber como um problema do mundo real pode exigir uma estrutura de dados bastante ampla. O modelo contempla, por exemplo, o relacionamento entre aeronaves e companhias, funcionários e setores, operações de rota e operações de solo, além do controle de solicitações e de terceiros.
 
 Esse projeto também me permitiu conhecer melhor o universo da aviação enquanto pesquisava informações para tornar a modelagem mais próxima da realidade. Ao mesmo tempo, pude me aprofundar justamente em uma área pela qual tenho bastante interesse: bancos de dados. Por isso, considero este um dos meus projetos favoritos, não apenas pelo resultado técnico, mas principalmente pela experiência de transformar um cenário complexo e pouco convencional em uma estrutura de dados organizada e funcional.`,
-    coverImage: abstractPaint,
-    images: [abstractPaint],
+    coverImage: trackCover,
+    images: [
+      [trackBanner, trackErFisico],
+      [trackErConceitual, trackWorkbench],
+    ],
   }
 ];
