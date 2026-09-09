@@ -19,6 +19,11 @@ import geoappHome from "@/assets/geoapp-home.png";
 import geoappTriangulo from "@/assets/geoapp-triangulo.png";
 import geoappPrisma from "@/assets/geoapp-prisma.png";
 import geoappQuestionario from "@/assets/geoapp-questionario.png";
+import romCover from "@/assets/rom-cover.png";
+import romBattle from "@/assets/rom-battle.png";
+import romVitoria from "@/assets/rom-vitoria.png";
+import romGameOver from "@/assets/rom-game-over.png";
+import romInicio from "@/assets/rom-inicio.png";
 
 export interface Demonstration {
   label: string;
@@ -113,7 +118,7 @@ O desenvolvimento foi realizado utilizando o Processing 4, ambiente baseado na l
       [geoappPrisma, geoappQuestionario],
     ],
   },
-  
+
   {
     id: "rom-retired-old-man",
     title: "ROM-Retired-Old-Man",
@@ -129,9 +134,13 @@ O desenvolvimento foi realizado utilizando o Processing 4, ambiente baseado na l
 O desenvolvimento teve como principal objetivo aprofundar os conhecimentos em lógica de programação e na implementação de mecânicas de jogos. Durante o projeto, foram desenvolvidas funcionalidades como movimentação do personagem, detecção de colisões e sistemas de combate, incluindo barras de vida, animações de ataque e dano, movimentação do chefe (boss) e outras mecânicas fundamentais para a jogabilidade, proporcionando experiência prática na implementação de sistemas interativos e na resolução de problemas.
 
 Além dos aspectos relacionados à programação, o projeto também representou uma oportunidade para explorar o uso de inteligência artificial no processo de desenvolvimento. Os cenários e personagens foram criados com o auxílio de ferramentas de IA, permitindo experimentar técnicas de geração de ativos visuais desde a concepção inicial, além de compreender como essas tecnologias podem otimizar o processo criativo e acelerar o desenvolvimento de jogos.`,
-    coverImage: prismaticPortrait,
-    images: [prismaticPortrait],
+    coverImage: romCover,
+    images: [
+      [romBattle, romVitoria],
+      [romGameOver, romInicio],
+    ],
   },
+  
   {
     id: "cronologia-dc-comics",
     title: "Site Linha do Tempo DC Comics",
