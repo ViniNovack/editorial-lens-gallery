@@ -99,8 +99,8 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-primary/30" />
           {/* Blend edges with surrounding sections */}
-          <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-primary/50 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-primary/50 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-primary/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-primary/30 to-transparent" />
         </div>
 
         {/* Glass Panel */}
