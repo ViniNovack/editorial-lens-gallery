@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowLeft, Sparkles, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { schools } from "@/data/education";
@@ -13,47 +13,128 @@ const School = () => {
   }
 
   const hasHighlights = school.highlights && school.highlights.length > 0;
+  const isPucpr = school.id === "pucpr";
 
   return (
     <Layout noPadding headerRevealMode>
-      {/* Hero - Split */}
-      <section className="relative min-h-[70vh] pt-20 md:pt-24 flex flex-col md:flex-row">
-        <div className="flex-1 bg-background flex flex-col justify-center px-6 md:px-12 py-12 md:py-0 order-2 md:order-1">
-          {school.logo && (
-            <div className="flex items-center gap-3 mb-8">
-              <img src={school.logo} alt="" className="w-10 h-10 object-contain" />
-              <span className="font-display text-lg font-semibold">{school.title}</span>
+      {isPucpr ? (
+        <>
+          {/* PUCPR: Hero full-width com logo sobreposta */}
+          <section className="relative w-full" style={{ height: "80vh", minHeight: "480px" }}>
+            <img
+              src={school.coverImage}
+              alt={school.title}
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay gradiente para melhor legibilidade */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
+
+            {/* Logo no canto superior esquerdo */}
+            {school.logo && (
+              <div className="absolute top-24 left-6 md:left-12">
+                <img
+                  src={school.logo}
+                  alt="PUCPR - Logo"
+                  className="h-16 md:h-24 object-contain drop-shadow-2xl"
+                  style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.7))" }}
+                />
+              </div>
+            )}
+
+            {/* Título no canto inferior esquerdo */}
+            <div className="absolute bottom-10 left-6 md:left-12 right-6 md:right-12">
+              <div className="flex flex-wrap gap-3 mb-4">
+                {school.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-white/40 text-white/80 backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+                {school.fullName || school.title}
+              </h1>
             </div>
-          )}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {school.fullName || school.title}
-          </h1>
-          <div className="flex flex-wrap gap-3">
-            {school.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
+          </section>
+
+          {/* PUCPR: Grade 2x2 das outras imagens */}
+          <section className="pb-0">
+            {school.images.length > 0 && (
+              <div className="grid grid-cols-2 gap-1">
+                {school.images.flatMap((img, rowIdx) =>
+                  Array.isArray(img)
+                    ? img.map((src, colIdx) => (
+                        <div
+                          key={`${rowIdx}-${colIdx}`}
+                          className="overflow-hidden"
+                          style={{ aspectRatio: "16/9" }}
+                        >
+                          <img
+                            src={src}
+                            alt={`${school.title} - campus ${rowIdx * 2 + colIdx + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          />
+                        </div>
+                      ))
+                    : [
+                        <div
+                          key={rowIdx}
+                          className="col-span-2 overflow-hidden"
+                          style={{ aspectRatio: "21/9" }}
+                        >
+                          <img
+                            src={img}
+                            alt={`${school.title} - ${rowIdx + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          />
+                        </div>,
+                      ]
+                )}
+              </div>
+            )}
+          </section>
+        </>
+      ) : (
+        /* Layout padrão para outras escolas */
+        <section className="relative min-h-[70vh] pt-20 md:pt-24 flex flex-col md:flex-row">
+          <div className="flex-1 bg-background flex flex-col justify-center px-6 md:px-12 py-12 md:py-0 order-2 md:order-1">
+            {school.logo && (
+              <div className="flex items-center gap-3 mb-8">
+                <img src={school.logo} alt="" className="w-10 h-10 object-contain" />
+                <span className="font-display text-lg font-semibold">{school.title}</span>
+              </div>
+            )}
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              {school.fullName || school.title}
+            </h1>
+            <div className="flex flex-wrap gap-3">
+              {school.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="flex-1 order-1 md:order-2">
-          <img
-            src={school.coverImage}
-            alt={school.title}
-            className="w-full h-64 md:h-full object-cover"
-          />
-        </div>
-      </section>
+          <div className="flex-1 order-1 md:order-2">
+            <img
+              src={school.coverImage}
+              alt={school.title}
+              className="w-full h-64 md:h-full object-cover"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Facts + Highlights */}
       <section className="container-wide py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Facts column */}
           <div className="md:col-span-1 space-y-8">
-
             {school.campus && (
               <RevealText>
                 <div>
@@ -124,8 +205,8 @@ const School = () => {
         </div>
       </section>
 
-      {/* Gallery (só aparece no formato antigo, sem highlights) */}
-      {!hasHighlights && (
+      {/* Gallery (só aparece para escolas sem highlights e sem layout especial) */}
+      {!hasHighlights && !isPucpr && (
         <section className="container-wide pb-16 md:pb-24">
           <div className="space-y-8 md:space-y-12">
             {school.images.map((image, index) => (
