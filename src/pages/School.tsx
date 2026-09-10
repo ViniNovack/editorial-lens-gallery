@@ -183,7 +183,7 @@ const School = () => {
           className="inline-flex items-center gap-3 text-muted-foreground hover-highlight group"
         >
           <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
-          <span>Voltar para Formação</span>
+          <span>Voltar</span>
         </Link>
       </section>
     </Layout>
