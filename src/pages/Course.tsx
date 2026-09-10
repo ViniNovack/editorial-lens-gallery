@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Github, Youtube, BookOpen } from "lucide-react";
+import { ArrowLeft, Github, Youtube, BookOpen, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { schools } from "@/data/education";
@@ -52,12 +52,6 @@ const Course = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Facts column */}
           <div className="md:col-span-1 space-y-8">
-            <RevealText>
-              <div>
-                <p className="text-label mb-2">Nome</p>
-                <p>{course.title}</p>
-              </div>
-            </RevealText>
             {course.modality && (
               <RevealText>
                 <div>
@@ -66,19 +60,22 @@ const Course = () => {
                 </div>
               </RevealText>
             )}
-            {(course.duration || course.year) && (
+            <RevealText>
+              <div>
+                <p className="text-label mb-2">Período de estudo</p>
+                <p>{course.year || "2026 - 2029"}</p>
+              </div>
+            </RevealText>
+            {course.website && (
               <RevealText>
-                <div>
-                  <p className="text-label mb-2">Duração</p>
-                  <p>{course.duration || course.year}</p>
-                </div>
-              </RevealText>
-            )}
-            {school.website && (
-              <RevealText>
-                <a href={school.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-foreground px-5 py-2.5 text-sm uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors">
-                  Site oficial
-                  <ExternalLink size={14} />
+                <a
+                  href={course.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-base hover-highlight group"
+                >
+                  <GraduationCap size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                  <span>Página Oficial</span>
                 </a>
               </RevealText>
             )}
