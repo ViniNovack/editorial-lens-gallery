@@ -1,7 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GraduationCap } from "lucide-react";
-import type { School } from "@/data/education";
+import { GraduationCap, Code2 } from "lucide-react";
+import type { School, Course } from "@/data/education";
+
+// Ícones que representam a área de cada curso (chave usada no campo "icon" do curso)
+const courseIcons: Record<string, typeof Code2> = {
+  code: Code2,
+};
+
+// Ícone do curso; cai de volta na flechinha padrão quando nenhum ícone é definido
+const CourseIcon = ({ course }: { course: Course }) => {
+  const Icon = course.icon ? courseIcons[course.icon] : null;
+  if (!Icon) {
+    return <span className="text-muted-foreground">→</span>;
+  }
+  return <Icon size={16} className="text-muted-foreground shrink-0" />;
+};
 
 interface SchoolCardProps {
   school: School;
@@ -46,7 +60,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
             onMouseEnter={() => setHoveredImage(course.hoverImage || course.coverImage)}
             onMouseLeave={() => setHoveredImage(null)}
           >
-            <span className="text-muted-foreground">→</span>
+            <CourseIcon course={course} />
             <span className="flex-1 text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
               {course.title}
             </span>
