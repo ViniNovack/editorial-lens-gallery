@@ -27,6 +27,7 @@ export interface Course {
   github?: string;
   youtube?: string;
   website?: string;
+  studyRepositories?: { title: string; url: string }[];
   description: string;
   coverImage: string;
   hoverImage?: string;
@@ -70,6 +71,12 @@ export const schools: School[] = [
         tags: ["GRADUAÇÃO"],
         year: "2026 - 2029",
         website: "https://www.pucpr.br/cursos-graduacao/ciencia-da-computacao/",
+        studyRepositories: [
+          { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-" },
+          { title: "Programa-o_Inperativa_C", url: "https://github.com/ViniNovack/Programa-o_Inperativa_C" },
+          { title: "Programacao_web_PUC", url: "https://github.com/ViniNovack/Programacao_web_PUC" },
+          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritimico_1-Periodo" },
+        ],
         description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
         images: [tarotCards],
