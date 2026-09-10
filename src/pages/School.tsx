@@ -53,12 +53,7 @@ const School = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Facts column */}
           <div className="md:col-span-1 space-y-8">
-            <RevealText>
-              <div>
-                <p className="text-label mb-2">Nome</p>
-                <p>{school.fullName || school.title}</p>
-              </div>
-            </RevealText>
+
             {school.campus && (
               <RevealText>
                 <div>
@@ -69,7 +64,7 @@ const School = () => {
             )}
             <RevealText>
               <div>
-                <p className="text-label mb-2">Parceria desde</p>
+                <p className="text-label mb-2">Período de estudo</p>
                 <p>{school.year}</p>
               </div>
             </RevealText>

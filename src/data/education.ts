@@ -53,15 +53,16 @@ export interface School {
 
 export const schools: School[] = [
   {
-    id: "pucpr",
-    title: "PUCPR - Pontifícia Universidade Católica do Paraná",
-    fullName: "PUCPR - Pontifícia Universidade Católica do Paraná",
-    tags: ["UNIVERSIDADE"],
-    year: "2026 - 2029",
-    description: "Texto de exemplo sobre a PUCPR. Substitua por uma descrição real quando quiser.",
-    coverImage: tarotCards,
-    images: [tarotCards],
-    courses: [
+  id: "pucpr",
+  title: "PUCPR - Pontifícia Universidade Católica do Paraná",
+  fullName: "PUCPR - Pontifícia Universidade Católica do Paraná",
+  website: "https://www.pucpr.br/",
+  tags: ["UNIVERSIDADE"],
+  year: "2026 - 2029",
+  description: "Fundada em 1959, a PUCPR é uma universidade católica privada sem fins lucrativos orientada por princípios éticos, cristãos e maristas que atua como promotora do desenvolvimento regional e inclusão social.\n\nA PUCPR tem como foco desenvolver a excelência educacional, pesquisas de qualidade, fomentar o empreendedorismo e inovação além de promover a multi e interculturalidade aliadas à inclusão social.\n\nA PUCPR tem conquistado reconhecimento nacional e internacional. De acordo com um dos mais importantes rankings mundiais da educação superior, o Times Higher Education, a PUCPR é a 11ª colocada, entre as universidades brasileiras, e a 1ª do Paraná, empatada com a Universidade Estadual de Ponta Grossa (UEPG).\n\nPresente em quatro cidades no Estado do Paraná, possui cerca de 100 cursos de graduação, 190 cursos de educação continuada e 17 programas de stricto sensu que compreendem diversas áreas do conhecimento distribuídos em seis escolas: Escola de Negócios, Escola de Belas Artes, Escola de Educação e Humanidades, Escola de Medicina e Ciências da Vida, Escola de Direito e Escola Politécnica.",
+  coverImage: tarotCards,
+  images: [tarotCards],
+  courses: [
       {
         id: "bacharelado-ciencia-da-computacao",
         title: "Bacharelado em Ciência da Computação",
