@@ -8,8 +8,12 @@ const courseIcons: Record<string, typeof Computer> = {
   computer: Computer,
 };
 
-// Ícone do curso; cai de volta na flechinha padrão quando nenhum ícone é definido
+// Ícone do curso; usa um pato de borracha quando "duck" é definido
 const CourseIcon = ({ course }: { course: Course }) => {
+  if (course.icon === "duck") {
+    return <span className="text-base leading-none shrink-0" aria-label="Pato de borracha">🦆</span>;
+  }
+
   const Icon = course.icon ? courseIcons[course.icon] : null;
   if (!Icon) {
     return <span className="text-muted-foreground">→</span>;
@@ -60,16 +64,18 @@ export function SchoolCard({ school }: SchoolCardProps) {
             onMouseEnter={() => setHoveredImage(course.hoverImage || course.coverImage)}
             onMouseLeave={() => setHoveredImage(null)}
           >
-            <CourseIcon course={course} />
-            <span className="flex-1 text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
-              {course.title}
-            </span>
-            {course.year && (
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                {course.year}
+            <div className="flex w-full items-center gap-3">
+              <CourseIcon course={course} />
+              <span className="flex-1 text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
+                {course.title}
               </span>
-            )}
-            <div className="flex items-center gap-2">
+              {course.year && (
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                  {course.year}
+                </span>
+              )}
+            </div>
+            <div className="flex w-full flex-wrap items-center gap-2 pl-7">
               {course.tags.map((tag) => (
                 <span
                   key={tag}
