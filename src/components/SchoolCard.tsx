@@ -8,10 +8,29 @@ const courseIcons: Record<string, typeof Computer> = {
   computer: Computer,
 };
 
-// Ícone do curso; usa um pato de borracha quando "duck" é definido
+// Ícone do curso; usa um pato de borracha desenhado em linha quando "duck" é definido
 const CourseIcon = ({ course }: { course: Course }) => {
   if (course.icon === "duck") {
-    return <span className="text-base leading-none shrink-0" aria-label="Pato de borracha">🦆</span>;
+    return (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-muted-foreground shrink-0"
+        aria-label="Pato de borracha"
+      >
+        <path d="M5.5 15.5c0-3.1 2.2-5.5 5.2-5.8V7.8c0-1.8 1.5-3.3 3.3-3.3 1.5 0 2.7 1 3.1 2.4.3-.1.7-.2 1-.2 1.2 0 2.2 1 2.2 2.2 0 .7-.3 1.3-.8 1.7 1.5 1 2.5 2.7 2.5 4.7 0 3.2-2.7 5.8-6 5.8h-5.3c-2.9 0-5.2-2.4-5.2-5.6Z" />
+        <path d="M16.8 9.2c.8.1 1.7.4 2.4.9" />
+        <path d="M17.5 7.2h1.2l1.3-.7-1.3 2" />
+        <circle cx="16.8" cy="7.2" r=".45" fill="currentColor" stroke="none" />
+        <path d="M5.7 14.1 3.2 13c-.7-.3-1.1-1-.8-1.7.3-.7 1-.9 1.7-.6l2.3 1" />
+      </svg>
+    );
   }
 
   const Icon = course.icon ? courseIcons[course.icon] : null;
