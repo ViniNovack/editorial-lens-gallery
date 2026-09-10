@@ -4,6 +4,8 @@ import pucprLogo from "@/assets/pucpr-logo.png";
 import pucprCampus1 from "@/assets/pucpr-campus1.jpg";
 import pucprCampus2 from "@/assets/pucpr-campus2.jpg";
 import pucprCampus3 from "@/assets/pucpr-campus3.jpg";
+import imagemComputadores from "@/assets/imagem_computadores.jpg";
+import imagemComputadores2 from "@/assets/imagem_computadores_2.jpg";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -83,11 +85,11 @@ export const schools: School[] = [
           { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-" },
           { title: "Programa-o_Inperativa_C", url: "https://github.com/ViniNovack/Programa-o_Inperativa_C" },
           { title: "Programacao_web_PUC", url: "https://github.com/ViniNovack/Programacao_web_PUC" },
-          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritimico_1-Periodo" },
+          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm... etc" },
         ],
         description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
-        images: [tarotCards],
+        images: [[imagemComputadores, imagemComputadores2]],
         icon: "computer",
       },
     ],
