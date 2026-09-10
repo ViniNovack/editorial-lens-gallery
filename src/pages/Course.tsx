@@ -15,38 +15,79 @@ const Course = () => {
   }
 
   const hasHighlights = course.highlights && course.highlights.length > 0;
+  const isPucpr = school.id === "pucpr";
 
   return (
     <Layout noPadding headerRevealMode>
-      {/* Hero - Split */}
-      <section className="relative min-h-[70vh] pt-20 md:pt-24 flex flex-col md:flex-row">
-        <div className="flex-1 bg-background flex flex-col justify-center px-6 md:px-12 py-12 md:py-0 order-2 md:order-1">
-          <div className="flex items-center gap-3 mb-8">
-            {school.logo && <img src={school.logo} alt="" className="w-8 h-8 object-contain" />}
-            <span className="font-display text-base font-semibold text-muted-foreground">{school.title}</span>
-          </div>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {course.title}
-          </h1>
-          <div className="flex flex-wrap gap-3">
-            {course.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="flex-1 order-1 md:order-2">
+      {/* Hero */}
+      {isPucpr ? (
+        <section className="relative w-full" style={{ height: "80vh", minHeight: "480px" }}>
           <img
-            src={course.coverImage}
-            alt={course.title}
-            className="w-full h-64 md:h-full object-cover"
+            src={school.coverImage}
+            alt={school.title}
+            className="w-full h-full object-cover"
           />
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
+
+          {/* Logo da instituição */}
+          {school.logo && (
+            <div className="absolute top-24 left-6 md:left-12">
+              <img
+                src={school.logo}
+                alt="PUCPR - Logo"
+                className="h-28 md:h-40 object-contain drop-shadow-2xl"
+                style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.7))" }}
+              />
+            </div>
+          )}
+
+          {/* Título do curso */}
+          <div className="absolute bottom-10 left-6 md:left-12 right-6 md:right-12">
+            <div className="flex flex-wrap gap-3 mb-4">
+              {course.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-white/40 text-white/80 backdrop-blur-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+              {course.title}
+            </h1>
+          </div>
+        </section>
+      ) : (
+        <section className="relative min-h-[70vh] pt-20 md:pt-24 flex flex-col md:flex-row">
+          <div className="flex-1 bg-background flex flex-col justify-center px-6 md:px-12 py-12 md:py-0 order-2 md:order-1">
+            <div className="flex items-center gap-3 mb-8">
+              {school.logo && <img src={school.logo} alt="" className="w-8 h-8 object-contain" />}
+              <span className="font-display text-base font-semibold text-muted-foreground">{school.title}</span>
+            </div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              {course.title}
+            </h1>
+            <div className="flex flex-wrap gap-3">
+              {course.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] md:text-xs uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 order-1 md:order-2">
+            <img
+              src={course.coverImage}
+              alt={course.title}
+              className="w-full h-64 md:h-full object-cover"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Facts + Highlights */}
       <section className="container-wide py-16 md:py-24">
