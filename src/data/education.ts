@@ -69,7 +69,7 @@ export const schools: School[] = [
         description: "Texto de exemplo sobre esse curso.",
         coverImage: tarotCards,
         images: [tarotCards],
-        icon: "code",
+        icon: "computer",
       },
     ],
   },
