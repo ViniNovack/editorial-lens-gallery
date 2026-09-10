@@ -88,9 +88,10 @@ export const schools: School[] = [
     id: "instituto-tecnologico-avancado",
     title: "Harvard",
     fullName: "Harvard",
+    website: "https://www.harvard.edu/",
     tags: ["UNIVERSIDADE", "CURSOS"],
     year: "2024",
-    description: "",
+    description: "A Universidade Harvard é uma das instituições de ensino superior mais antigas e reconhecidas dos Estados Unidos, fundada em 1636 e localizada em Cambridge, Massachusetts. Ao longo de sua história, tornou-se uma referência internacional em educação, pesquisa e produção de conhecimento, reunindo diversas áreas de estudo e uma comunidade acadêmica formada por estudantes, professores e pesquisadores de diferentes partes do mundo.\n\nHarvard possui uma forte tradição de excelência acadêmica e pesquisa, com escolas e programas dedicados a diferentes campos do conhecimento. A universidade também se destaca por sua contribuição para a ciência, tecnologia, artes, humanidades, negócios, direito, medicina e outras áreas, além de manter iniciativas educacionais abertas ao público, como cursos online que permitem que pessoas de diferentes lugares tenham acesso a conteúdos produzidos pela instituição.",
     coverImage: tarotCards,
     images: [tarotCards],
     courses: [
