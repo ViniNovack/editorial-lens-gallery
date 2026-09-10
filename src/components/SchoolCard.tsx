@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GraduationCap, Computer } from "lucide-react";
+import { GraduationCap, Computer, Brain } from "lucide-react";
 import type { School, Course } from "@/data/education";
 
 // Ícones que representam a área de cada curso (chave usada no campo "icon" do curso)
 const courseIcons: Record<string, typeof Computer> = {
   computer: Computer,
+  brain: Brain,
 };
 
 // Ícone do curso; usa um pato de borracha desenhado em linha quando "duck" é definido
@@ -56,7 +57,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
         onMouseLeave={() => setHoveredImage(null)}
       >
         <GraduationCap size={28} className="text-muted-foreground group-hover:text-accent transition-colors shrink-0 mt-1" />
-        <div className="flex-1 flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <h2 className="text-xl md:text-2xl font-sans uppercase tracking-wide group-hover:text-accent transition-colors">
             {school.title}
           </h2>
@@ -68,9 +69,6 @@ export function SchoolCard({ school }: SchoolCardProps) {
               {tag}
             </span>
           ))}
-          <span className="text-xs uppercase tracking-widest text-muted-foreground ml-auto">
-            {school.year}
-          </span>
         </div>
       </Link>
 
@@ -95,11 +93,6 @@ export function SchoolCard({ school }: SchoolCardProps) {
                 {tag}
               </span>
             ))}
-            {course.year && (
-              <span className="text-xs uppercase tracking-widest text-muted-foreground ml-auto">
-                {course.year}
-              </span>
-            )}
           </Link>
         ))}
       </div>
