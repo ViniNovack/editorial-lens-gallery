@@ -54,8 +54,8 @@ export interface School {
 export const schools: School[] = [
   {
     id: "pucpr",
-    title: "PUCPR",
-    fullName: "Pontifícia Universidade Católica do Paraná",
+    title: "PUCPR - Pontifícia Universidade Católica do Paraná",
+    fullName: "PUCPR - Pontifícia Universidade Católica do Paraná",
     tags: ["UNIVERSIDADE"],
     year: "2026 - 2029",
     description: "Texto de exemplo sobre a PUCPR. Substitua por uma descrição real quando quiser.",

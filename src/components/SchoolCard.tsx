@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GraduationCap, Code2 } from "lucide-react";
+import { GraduationCap, Computer } from "lucide-react";
 import type { School, Course } from "@/data/education";
 
 // Ícones que representam a área de cada curso (chave usada no campo "icon" do curso)
-const courseIcons: Record<string, typeof Code2> = {
-  code: Code2,
+const courseIcons: Record<string, typeof Computer> = {
+  computer: Computer,
 };
 
 // Ícone do curso; cai de volta na flechinha padrão quando nenhum ícone é definido
