@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowLeft, ExternalLink, Sparkles, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { schools } from "@/data/education";
@@ -70,10 +70,22 @@ const School = () => {
             </RevealText>
             {school.website && (
               <RevealText>
-                <a href={school.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-foreground px-5 py-2.5 text-sm uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors">
-                  Site oficial
-                  <ExternalLink size={14} />
-                </a>
+                <div>
+                  <p className="text-label mb-2">Página oficial</p>
+                  <a
+                    href={school.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open(school.website, "_blank", "noopener,noreferrer");
+                    }}
+                    className="flex items-center gap-4 text-lg hover-highlight group"
+                  >
+                    <GraduationCap size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>Página Oficial</span>
+                  </a>
+                </div>
               </RevealText>
             )}
           </div>
