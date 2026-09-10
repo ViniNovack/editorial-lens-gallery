@@ -35,7 +35,7 @@ const School = () => {
                 <img
                   src={school.logo}
                   alt="PUCPR - Logo"
-                  className="h-16 md:h-24 object-contain drop-shadow-2xl"
+                  className="h-24 md:h-36 object-contain drop-shadow-2xl"
                   style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.7))" }}
                 />
               </div>
@@ -57,43 +57,6 @@ const School = () => {
                 {school.fullName || school.title}
               </h1>
             </div>
-          </section>
-
-          {/* PUCPR: Grade 2x2 das outras imagens */}
-          <section className="pb-0">
-            {school.images.length > 0 && (
-              <div className="grid grid-cols-2 gap-1">
-                {school.images.flatMap((img, rowIdx) =>
-                  Array.isArray(img)
-                    ? img.map((src, colIdx) => (
-                        <div
-                          key={`${rowIdx}-${colIdx}`}
-                          className="overflow-hidden"
-                          style={{ aspectRatio: "16/9" }}
-                        >
-                          <img
-                            src={src}
-                            alt={`${school.title} - campus ${rowIdx * 2 + colIdx + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                          />
-                        </div>
-                      ))
-                    : [
-                        <div
-                          key={rowIdx}
-                          className="col-span-2 overflow-hidden"
-                          style={{ aspectRatio: "21/9" }}
-                        >
-                          <img
-                            src={img}
-                            alt={`${school.title} - ${rowIdx + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                          />
-                        </div>,
-                      ]
-                )}
-              </div>
-            )}
           </section>
         </>
       ) : (
@@ -204,6 +167,43 @@ const School = () => {
           )}
         </div>
       </section>
+
+      {/* PUCPR: Galeria abaixo do texto e dos tópicos */}
+      {isPucpr && school.images.length > 0 && (
+        <section className="pb-0">
+          <div className="grid grid-cols-2 gap-1">
+            {school.images.flatMap((img, rowIdx) =>
+              Array.isArray(img)
+                ? img.map((src, colIdx) => (
+                    <div
+                      key={`${rowIdx}-${colIdx}`}
+                      className="overflow-hidden"
+                      style={{ aspectRatio: "16/9" }}
+                    >
+                      <img
+                        src={src}
+                        alt={`${school.title} - campus ${rowIdx * 2 + colIdx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                    </div>
+                  ))
+                : [
+                    <div
+                      key={rowIdx}
+                      className="col-span-2 overflow-hidden"
+                      style={{ aspectRatio: "21/9" }}
+                    >
+                      <img
+                        src={img}
+                        alt={`${school.title} - ${rowIdx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                    </div>,
+                  ]
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Gallery (só aparece para escolas sem highlights e sem layout especial) */}
       {!hasHighlights && !isPucpr && (
