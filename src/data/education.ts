@@ -11,10 +11,26 @@ export interface Course {
   images: (string | string[])[];
 }
 
-export interface SchoolHighlight {
+export interface Highlight {
   title: string;
   text: string;
   image: string;
+}
+
+export interface Course {
+  id: string;
+  title: string;
+  tags: string[];
+  year?: string;
+  duration?: string;
+  modality?: string;
+  github?: string;
+  youtube?: string;
+  description: string;
+  coverImage: string;
+  hoverImage?: string;
+  images: (string | string[])[];
+  highlights?: Highlight[];
 }
 
 export interface School {
@@ -30,7 +46,7 @@ export interface School {
   coverImage: string;
   hoverImage?: string;
   images: (string | string[])[];
-  highlights?: SchoolHighlight[];
+  highlights?: Highlight[];
   courses: Course[];
 }
 
@@ -90,12 +106,26 @@ export const schools: School[] = [
         id: "ciencia-de-dados-ia",
         title: "Ciência de Dados e Inteligência Artificial",
         tags: ["DADOS", "IA"],
+        modality: "Presencial",
+        duration: "4 anos",
+        github: "https://github.com/exemplo",
+        youtube: "https://youtube.com/exemplo",
         description: "Texto de exemplo sobre esse curso.",
         coverImage: tarotCards,
         images: [tarotCards],
+        highlights: [
+          {
+            title: "Resumo do Curso",
+            text: "Texto de exemplo resumindo o curso.",
+            image: tarotCards,
+          },
+          {
+            title: "Diferenciais do Curso",
+            text: "Texto de exemplo sobre os diferenciais do curso.",
+            image: tarotCards,
+          },
+        ],
       },
-    ],
-  },
   {
     id: "cursos-especializacao-rapida",
     title: "Cursos de Especialização Rápida (CER)",
