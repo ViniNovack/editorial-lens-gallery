@@ -83,27 +83,23 @@ export function SchoolCard({ school }: SchoolCardProps) {
             onMouseEnter={() => setHoveredImage(course.hoverImage || course.coverImage)}
             onMouseLeave={() => setHoveredImage(null)}
           >
-            <div className="flex w-full items-center gap-3">
-              <CourseIcon course={course} />
-              <span className="flex-1 text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
-                {course.title}
+            <CourseIcon course={course} />
+            <span className="text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
+              {course.title}
+            </span>
+            {course.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+              >
+                {tag}
               </span>
-              {course.year && (
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                  {course.year}
-                </span>
-              )}
-            </div>
-            <div className="flex w-full flex-wrap items-center gap-2 pl-7">
-              {course.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            ))}
+            {course.year && (
+              <span className="text-xs uppercase tracking-widest text-muted-foreground ml-auto">
+                {course.year}
+              </span>
+            )}
           </Link>
         ))}
       </div>
