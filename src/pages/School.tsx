@@ -35,7 +35,7 @@ const School = () => {
                 <img
                   src={school.logo}
                   alt="PUCPR - Logo"
-                  className="h-24 md:h-36 object-contain drop-shadow-2xl"
+                  className="h-28 md:h-40 object-contain drop-shadow-2xl"
                   style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.7))" }}
                 />
               </div>
