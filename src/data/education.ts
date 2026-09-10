@@ -26,6 +26,7 @@ export interface Course {
   modality?: string;
   github?: string;
   youtube?: string;
+  website?: string;
   description: string;
   coverImage: string;
   hoverImage?: string;
@@ -67,7 +68,9 @@ export const schools: School[] = [
         id: "bacharelado-ciencia-da-computacao",
         title: "Bacharelado em Ciência da Computação",
         tags: ["GRADUAÇÃO"],
-        description: "Texto de exemplo sobre esse curso.",
+        year: "2026 - 2029",
+        website: "https://www.pucpr.br/cursos-graduacao/ciencia-da-computacao/",
+        description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
         images: [tarotCards],
         icon: "computer",
@@ -117,7 +120,7 @@ export const schools: School[] = [
           },
           {
             title: "Diferenciais do Curso",
-            text: "Texto de exemplo sobre os diferenciais do curso.",
+            text: "Texto de exemplo sobre os diferenciais desse curso.",
             image: tarotCards,
           },
         ],
