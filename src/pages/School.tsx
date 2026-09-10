@@ -75,12 +75,7 @@ const School = () => {
             </RevealText>
             {school.website && (
               <RevealText>
-                
-                  href={school.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-foreground px-5 py-2.5 text-sm uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors"
-                >
+                <a href={school.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-foreground px-5 py-2.5 text-sm uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors">
                   Site oficial
                   <ExternalLink size={14} />
                 </a>
