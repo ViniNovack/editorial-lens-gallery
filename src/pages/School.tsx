@@ -237,7 +237,7 @@ const School = () => {
 
       {/* Courses */}
       {school.courses.length > 0 && (
-        <section className="container-wide pb-16 md:pb-24">
+        <section className="container-wide pt-12 md:pt-16 pb-16 md:pb-24">
           <RevealText>
             <div>
               <p className="text-label mb-4">Cursos</p>
