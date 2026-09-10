@@ -79,6 +79,25 @@ const Course = () => {
                 </a>
               </RevealText>
             )}
+            {course.studyRepositories && course.studyRepositories.length > 0 && (
+              <RevealText>
+                <div className="space-y-3">
+                  <p className="text-label mb-2">Repositórios de estudos:</p>
+                  {course.studyRepositories.map((repository) => (
+                    <a
+                      key={repository.url}
+                      href={repository.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-base hover-highlight group"
+                    >
+                      <Github size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                      <span>{repository.title}</span>
+                    </a>
+                  ))}
+                </div>
+              </RevealText>
+            )}
 
             {(course.github || course.youtube) && (
               <RevealText>
