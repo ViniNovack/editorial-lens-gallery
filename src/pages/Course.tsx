@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Github, Youtube, BookOpen, GraduationCap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
@@ -6,6 +6,7 @@ import { schools } from "@/data/education";
 
 const Course = () => {
   const { schoolId, courseId } = useParams();
+  const navigate = useNavigate();
   const school = schools.find((s) => s.id === schoolId);
   const course = school?.courses.find((c) => c.id === courseId);
 
@@ -186,13 +187,14 @@ const Course = () => {
 
       {/* Back Link */}
       <section className="container-wide pb-24">
-        <Link
-          to={`/formacao/${school.id}`}
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
           className="inline-flex items-center gap-3 text-muted-foreground hover-highlight group"
         >
           <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
           <span>Voltar</span>
-        </Link>
+        </button>
       </section>
     </Layout>
   );
