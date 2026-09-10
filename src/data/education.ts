@@ -11,15 +11,26 @@ export interface Course {
   images: (string | string[])[];
 }
 
+export interface SchoolHighlight {
+  title: string;
+  text: string;
+  image: string;
+}
+
 export interface School {
   id: string;
   title: string;
+  fullName?: string;
+  logo?: string;
+  campus?: string;
+  website?: string;
   tags: string[];
   year: string;
   description: string;
   coverImage: string;
   hoverImage?: string;
   images: (string | string[])[];
+  highlights?: SchoolHighlight[];
   courses: Course[];
 }
 
@@ -54,11 +65,26 @@ export const schools: School[] = [
   {
     id: "instituto-tecnologico-avancado",
     title: "Instituto Tecnológico Avançado",
+    fullName: "Instituto Tecnológico Avançado",
+    campus: "Exemplo",
+    website: "https://exemplo.com",
     tags: ["ACADÊMICO"],
     year: "2026",
     description: "Texto de exemplo sobre essa instituição.",
     coverImage: tarotCards,
     images: [tarotCards],
+    highlights: [
+      {
+        title: "Uma Tradição de Excelência",
+        text: "Texto de exemplo sobre a tradição e o histórico dessa instituição.",
+        image: tarotCards,
+      },
+      {
+        title: "Campus Inovador",
+        text: "Texto de exemplo sobre o campus e a estrutura dessa instituição.",
+        image: tarotCards,
+      },
+    ],
     courses: [
       {
         id: "ciencia-de-dados-ia",
