@@ -126,6 +126,8 @@ export const schools: School[] = [
           },
         ],
       },
+    ],
+  },
   {
     id: "cursos-especializacao-rapida",
     title: "Cursos de Especialização Rápida (CER)",
