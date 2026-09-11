@@ -57,28 +57,20 @@ const Contact = () => {
                 <span>vininomn@gmail.com</span>
               </a>
 
-              <a
+              
                 href="https://www.linkedin.com/in/vininovack"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://www.linkedin.com/in/vininovack", "_blank", "noopener,noreferrer");
-                }}
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
                 <Linkedin size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                 <span>Vinícius Jimenez Novack</span>
               </a>
 
-              <a
+              
                 href="https://github.com/ViniNovack"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://github.com/ViniNovack", "_blank", "noopener,noreferrer");
-                }}
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
                 <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />

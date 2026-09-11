@@ -149,14 +149,10 @@ const Project = () => {
               <RevealText>
                 <div>
                   <p className="text-label mb-2">Repositório</p>
-                  <a
+                  
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open(project.github, "_blank", "noopener,noreferrer");
-                    }}
                     className="flex items-center gap-4 text-lg hover-highlight group"
                   >
                     <Github size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
@@ -170,14 +166,10 @@ const Project = () => {
               <RevealText>
                 <div>
                   <p className="text-label mb-2">Demonstração</p>
-                  <a
+                  
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open(project.youtube, "_blank", "noopener,noreferrer");
-                    }}
                     className="flex items-center gap-4 text-lg hover-highlight group"
                   >
                     <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
@@ -193,15 +185,11 @@ const Project = () => {
                   <p className="text-label mb-2">Demonstrações</p>
                   <div className="space-y-3">
                     {project.demonstrations.map((demo, index) => (
-                      <a
+                      
                         key={index}
                         href={demo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.open(demo.url, "_blank", "noopener,noreferrer");
-                        }}
                         className="flex items-center gap-4 text-lg hover-highlight group"
                       >
                         <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />

@@ -60,7 +60,7 @@ const School = () => {
               <RevealText>
                 <div>
                   <p className="text-label mb-2">Página oficial</p>
-                  <a href={school.website} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); window.open(school.website, "_blank", "noopener,noreferrer"); }} className="flex items-center gap-4 text-lg hover-highlight group">
+                  <a href={school.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
                     <GraduationCap size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
                     <span>Página Oficial</span>
                   </a>
