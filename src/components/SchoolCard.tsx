@@ -46,7 +46,7 @@ interface SchoolCardProps {
 }
 
 export function SchoolCard({ school }: SchoolCardProps) {
-  const [hoveredCourseImage, setHoveredCourseImage] = useState<string | null>(null);
+  const [hoveredCourseLogo, setHoveredCourseLogo] = useState<string | null>(null);
   const isPuc = school.id === "pucpr";
 
   return (
@@ -93,43 +93,53 @@ export function SchoolCard({ school }: SchoolCardProps) {
       </Link>
 
       <div className="space-y-3 mt-6 pl-0 md:pl-12">
-        {school.courses.map((course) => (
-          <Link
-            key={course.id}
-            to={`/formacao/${school.id}/${course.id}`}
-            className="flex flex-wrap items-center gap-3 group/course"
-            onMouseEnter={() => setHoveredCourseImage(course.hoverImage || course.coverImage)}
-            onMouseLeave={() => setHoveredCourseImage(null)}
-          >
-            <CourseIcon course={course} />
-            <span className="text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
-              {course.title}
-            </span>
-            {course.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </Link>
-        ))}
-      </div>
+        {school.courses.map((course) => {
+          // Por convenção, a primeira imagem do curso é sua logo.
+          const courseLogo = typeof course.images[0] === "string" ? course.images[0] : null;
 
-      {/* Floating hover image dos cursos */}
-      <div
-        className={`fixed right-8 lg:right-32 top-1/2 -translate-y-1/2 w-72 sm:w-80 md:w-96 lg:w-[28rem] max-h-[75vh] flex items-center justify-end pointer-events-none z-40 transition-all duration-300 ${
-          hoveredCourseImage ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
-        }`}
-      >
-        {hoveredCourseImage && (
-          <img
-            src={hoveredCourseImage}
-            alt=""
-            className="w-full h-auto max-h-[75vh] object-contain shadow-2xl border border-border/40"
-          />
-        )}
+          return (
+            <Link
+              key={course.id}
+              to={`/formacao/${school.id}/${course.id}`}
+              className="flex flex-wrap items-center gap-3"
+            >
+              <CourseIcon course={course} />
+              <div
+                className="relative w-fit"
+                onMouseEnter={() => setHoveredCourseLogo(courseLogo)}
+                onMouseLeave={() => setHoveredCourseLogo(null)}
+              >
+                <span className="text-base uppercase tracking-wide hover:text-accent transition-colors">
+                  {course.title}
+                </span>
+
+                {courseLogo && (
+                  <div
+                    className="absolute left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 hover:opacity-100 hover:translate-x-0 transition-all duration-300"
+                    style={{ opacity: hoveredCourseLogo === courseLogo ? undefined : undefined }}
+                  >
+                    {hoveredCourseLogo === courseLogo && (
+                      <img
+                        src={courseLogo}
+                        alt={`${course.title} - Logo`}
+                        className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
+                      />
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {course.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
