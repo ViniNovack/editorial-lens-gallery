@@ -42,7 +42,7 @@ export function ProjectListItem({
 
             {/* Hover Image - keeps the same distance from each title */}
             <div
-              className={`absolute left-[calc(100%+1rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 transition-all duration-300 ${
+              className={`absolute left-[calc(100%+0.5rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 transition-all duration-300 ${
                 isHovered
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-4"
