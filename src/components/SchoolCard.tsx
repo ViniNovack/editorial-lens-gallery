@@ -68,7 +68,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
               <div
                 className={`absolute ${
                   isPuc
-                    ? "left-[calc(100%+2.5rem)] bottom-[calc(100%+2.5rem)]"
+                    ? "left-[calc(100%+1rem)] bottom-[calc(100%+1rem)]"
                     : "left-[calc(100%+4rem)] top-1/2 -translate-y-1/2"
                 } w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300`}
               >
