@@ -107,22 +107,6 @@ const School = () => {
         </section>
       )}
 
-      {!hasHighlights && school.id !== "pucpr" && (
-        <section className="container-wide pb-16 md:pb-24">
-          <div className="space-y-8 md:space-y-12">
-            {school.images.map((image, index) => (
-              <div key={index} className="image-reveal animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                {Array.isArray(image) ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    {image.map((src, subIndex) => <img key={subIndex} src={src} alt={`${school.title} - ${subIndex + 1}`} className="w-full h-full object-cover" />)}
-                  </div>
-                ) : <img src={image} alt={`${school.title} - ${index + 1}`} className="w-full" />}
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {school.courses.length > 0 && (
         <section className="container-wide pt-12 md:pt-16 pb-16 md:pb-24">
           <RevealText>
