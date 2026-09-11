@@ -47,6 +47,7 @@ interface SchoolCardProps {
 
 export function SchoolCard({ school }: SchoolCardProps) {
   const [hoveredCourseImage, setHoveredCourseImage] = useState<string | null>(null);
+  const isPuc = school.id === "pucpr";
 
   return (
     <div className="border border-separator p-6 md:p-8">
@@ -56,33 +57,38 @@ export function SchoolCard({ school }: SchoolCardProps) {
       >
         <GraduationCap size={28} className="text-muted-foreground group-hover:text-accent transition-colors shrink-0 mt-1" />
 
-        {/* Título + logo da escola no hover, mantendo a mesma distância do título */}
-        <div className="relative w-fit max-w-[calc(100%-3rem)]">
-          <div className="flex flex-wrap items-center gap-3">
+        {/* Título + logo da escola no hover */}
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="relative w-fit">
             <h2 className="text-xl md:text-2xl font-sans uppercase tracking-wide group-hover:text-accent transition-colors">
               {school.title}
             </h2>
-            {school.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+
+            {school.logo && (
+              <div
+                className={`absolute ${
+                  isPuc
+                    ? "right-[calc(100%+3rem)] bottom-[calc(100%+3rem)]"
+                    : "left-[calc(100%+4rem)] top-1/2 -translate-y-1/2"
+                } w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300`}
               >
-                {tag}
-              </span>
-            ))}
+                <img
+                  src={school.logo}
+                  alt={`${school.title} - Logo`}
+                  className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
+                />
+              </div>
+            )}
           </div>
 
-          {school.logo && (
-            <div
-              className="absolute left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+          {school.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
             >
-              <img
-                src={school.logo}
-                alt={`${school.title} - Logo`}
-                className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
-              />
-            </div>
-          )}
+              {tag}
+            </span>
+          ))}
         </div>
       </Link>
 
