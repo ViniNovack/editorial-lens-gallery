@@ -11,27 +11,25 @@ const Index = () => {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
-    
+
     const rect = containerRef.current.getBoundingClientRect();
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
-    // Calculate offset from center (normalized to -1 to 1)
+
     const x = (e.clientX - rect.left - centerX) / centerX;
     const y = (e.clientY - rect.top - centerY) / centerY;
-    
+
     setMousePosition({ x, y });
   };
 
   return (
     <Layout noPadding>
-      <section 
+      <section
         ref={containerRef}
         onMouseMove={handleMouseMove}
         className="relative h-screen overflow-hidden"
       >
-        {/* Workspace Background Image with Parallax */}
-        <div 
+        <div
           className="absolute inset-[-40px] transition-transform duration-700 ease-out"
           style={{
             transform: `translate(${-mousePosition.x * 30}px, ${-mousePosition.y * 30}px) scale(1.05)`,
@@ -44,22 +42,18 @@ const Index = () => {
           />
         </div>
 
-        {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-primary/10" />
 
-        {/* Gradient blend into the welcome section */}
         <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/15 to-primary/30 z-[5] pointer-events-none" />
 
-        {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-foreground text-center px-4">
             Vinícius Jimenez Novack
           </h1>
         </div>
 
-        {/* Social Links - Bottom Right */}
         <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 flex flex-row gap-3">
-          
+          <a
             href="https://www.linkedin.com/in/vininovack"
             target="_blank"
             rel="noopener noreferrer"
@@ -68,7 +62,8 @@ const Index = () => {
             <Linkedin size={18} />
             <span className="text-sm font-medium">Vinícius Jimenez Novack</span>
           </a>
-          
+
+          <a
             href="https://github.com/ViniNovack"
             target="_blank"
             rel="noopener noreferrer"
@@ -80,9 +75,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Welcome Section */}
       <section className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src={welcomeBgAsset.url}
@@ -90,12 +83,10 @@ const Index = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/30" />
-          {/* Blend edges with surrounding sections */}
           <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-primary/25 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-t from-primary/25 to-transparent" />
         </div>
 
-        {/* Glass Panel */}
         <div className="relative z-10 container-wide flex justify-center px-6">
           <div className="max-w-4xl w-full bg-primary/15 backdrop-blur-md border border-primary/20 rounded-2xl px-8 py-10 md:px-14 md:py-14 shadow-2xl">
             <RevealText className="mb-6" delay={0}>
