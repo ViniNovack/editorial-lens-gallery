@@ -115,6 +115,7 @@ export const schools: School[] = [
         id: "cs50",
         title: "CS50",
         tags: ["RACIOCÍNIO ALGORÍTMICO", "LINGUAGENS DE PROGRAMAÇÃO", "CONCEITOS DE COMPUTAÇÃO"],
+        year: "2024",
         website: "https://pll.harvard.edu/course/cs50-introduction-computer-science",
         description: "Este é o CS50x, a introdução da Universidade de Harvard aos fundamentos da ciência da computação e à arte da programação, destinada tanto a alunos da área quanto a não alunos, com ou sem experiência prévia em programação. Ministrado por David J. Malan, o CS50x é um curso introdutório que ensina os alunos a pensar algoritmicamente e a resolver problemas de forma eficiente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulamento, gerenciamento de recursos, segurança, engenharia de software e desenvolvimento web. As linguagens utilizadas são C, Python, SQL e JavaScript, além de CSS e HTML. Os conjuntos de problemas são inspirados em áreas do mundo real, como biologia, criptografia, finanças, ciência forense e jogos. A versão presencial do CS50x, o CS50, é o maior curso oferecido por Harvard.\n\nAlunos que obtiverem uma nota satisfatória em 9 listas de exercícios (ou seja, tarefas de programação) e em um projeto final estarão aptos a receber um certificado. Este é um curso autodidático – você pode cursar CS50x no seu próprio ritmo.",
         coverImage: tarotCards,
