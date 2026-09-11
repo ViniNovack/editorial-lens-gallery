@@ -46,7 +46,6 @@ interface SchoolCardProps {
 }
 
 export function SchoolCard({ school }: SchoolCardProps) {
-  const [hoveredCourseLogo, setHoveredCourseLogo] = useState<string | null>(null);
   const isPuc = school.id === "pucpr";
 
   return (
@@ -104,27 +103,19 @@ export function SchoolCard({ school }: SchoolCardProps) {
               className="flex flex-wrap items-center gap-3"
             >
               <CourseIcon course={course} />
-              <div
-                className="relative w-fit"
-                onMouseEnter={() => setHoveredCourseLogo(courseLogo)}
-                onMouseLeave={() => setHoveredCourseLogo(null)}
-              >
-                <span className="text-base uppercase tracking-wide hover:text-accent transition-colors">
+
+              <div className="relative w-fit group/course">
+                <span className="text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
                   {course.title}
                 </span>
 
                 {courseLogo && (
-                  <div
-                    className="absolute left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 hover:opacity-100 hover:translate-x-0 transition-all duration-300"
-                    style={{ opacity: hoveredCourseLogo === courseLogo ? undefined : undefined }}
-                  >
-                    {hoveredCourseLogo === courseLogo && (
-                      <img
-                        src={courseLogo}
-                        alt={`${course.title} - Logo`}
-                        className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
-                      />
-                    )}
+                  <div className="absolute left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 group-hover/course:opacity-100 group-hover/course:translate-x-0 transition-all duration-300">
+                    <img
+                      src={courseLogo}
+                      alt={`${course.title} - Logo`}
+                      className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
+                    />
                   </div>
                 )}
               </div>
