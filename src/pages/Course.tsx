@@ -15,6 +15,7 @@ const Course = () => {
   }
 
   const hasHighlights = course.highlights && course.highlights.length > 0;
+  const isPucBcc = school.id === "pucpr" && course.id === "bacharelado-ciencia-da-computacao";
 
   return (
     <Layout noPadding headerRevealMode>
@@ -167,30 +168,56 @@ const Course = () => {
       {/* Gallery (só aparece no formato antigo, sem highlights) */}
       {!hasHighlights && (
         <section className="container-wide pb-16 md:pb-24">
-          <div className="space-y-8 md:space-y-12">
-            {course.images.map((image, index) => (
-              <div
-                key={index}
-                className="image-reveal animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {Array.isArray(image) ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    {image.map((src, subIndex) => (
-                      <img
-                        key={subIndex}
-                        src={src}
-                        alt={`${course.title} - ${subIndex + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <img src={image} alt={`${course.title} - ${index + 1}`} className="w-full" />
-                )}
+          {isPucBcc ? (
+            <div className="space-y-4 md:space-y-6">
+              {/* Logo centralizada acima das duas imagens, formando uma composição triangular */}
+              <div className="flex justify-center image-reveal animate-fade-in-up">
+                <img
+                  src={course.images[0] as string}
+                  alt={`${course.title} - Logo PUCPR Ciência da Computação`}
+                  className="w-full max-w-2xl object-contain"
+                />
               </div>
-            ))}
-          </div>
+
+              {Array.isArray(course.images[1]) && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 image-reveal animate-fade-in-up">
+                  {course.images[1].map((src, subIndex) => (
+                    <img
+                      key={subIndex}
+                      src={src}
+                      alt={`${course.title} - ${subIndex + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="space-y-8 md:space-y-12">
+              {course.images.map((image, index) => (
+                <div
+                  key={index}
+                  className="image-reveal animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {Array.isArray(image) ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                      {image.map((src, subIndex) => (
+                        <img
+                          key={subIndex}
+                          src={src}
+                          alt={`${course.title} - ${subIndex + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <img src={image} alt={`${course.title} - ${index + 1}`} className="w-full" />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </section>
       )}
 
