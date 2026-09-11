@@ -6,6 +6,7 @@ import pucprCampus2 from "@/assets/pucpr-campus2.jpg";
 import pucprCampus3 from "@/assets/pucpr-campus3.jpg";
 import imagemComputadores from "@/assets/imagem_computadores.jpg";
 import imagemComputadores2 from "@/assets/imagem_computadores_2.jpg";
+import logoPucBcc from "@/assets/Logo_PUC_BCC.png";
 import estruturaHa from "@/assets/estrutura_ha.png";
 import harvardUniversityShield from "@/assets/Harvard_University_shield.png";
 import cs50Logo from "@/assets/cs50_logo.png";
@@ -104,7 +105,7 @@ export const schools: School[] = [
         ],
         description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
-        images: [[imagemComputadores, imagemComputadores2]],
+        images: [logoPucBcc, [imagemComputadores, imagemComputadores2]],
         icon: "computer",
       },
     ],
