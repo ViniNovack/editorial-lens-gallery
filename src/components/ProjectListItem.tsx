@@ -30,14 +30,31 @@ export function ProjectListItem({
     >
       <div className="container-wide py-5 md:py-6">
         <div className="relative flex items-center justify-between gap-4">
-          {/* Title */}
-          <h3
-            className={`flex-1 text-lg md:text-xl lg:text-2xl font-sans uppercase tracking-wide transition-colors duration-300 ${
-              isHovered ? "text-accent-foreground" : "text-foreground"
-            }`}
-          >
-            {title}
-          </h3>
+          {/* Title + Hover Image */}
+          <div className="relative w-fit max-w-[calc(100%-8rem)]">
+            <h3
+              className={`text-lg md:text-xl lg:text-2xl font-sans uppercase tracking-wide transition-colors duration-300 ${
+                isHovered ? "text-accent-foreground" : "text-foreground"
+              }`}
+            >
+              {title}
+            </h3>
+
+            {/* Hover Image - keeps the same distance from each title */}
+            <div
+              className={`absolute left-[calc(100%+1rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 transition-all duration-300 ${
+                isHovered
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-4"
+              }`}
+            >
+              <img
+                src={image}
+                alt={title}
+                className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
+              />
+            </div>
+          </div>
 
           {/* Tags */}
           <div className="hidden sm:flex items-center gap-2">
@@ -63,21 +80,6 @@ export function ProjectListItem({
           >
             {year}
           </span>
-
-          {/* Hover Image - positioned relative to the hovered project row */}
-          <div
-            className={`absolute left-[46%] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 transition-all duration-300 ${
-              isHovered
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-4"
-            }`}
-          >
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
-            />
-          </div>
         </div>
       </div>
     </Link>
