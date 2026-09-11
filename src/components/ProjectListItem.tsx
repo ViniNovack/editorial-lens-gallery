@@ -62,7 +62,7 @@ export function ProjectListItem({
 
           {/* Hover Image */}
           <div 
-            className={`fixed right-8 lg:right-32 top-1/2 -translate-y-1/2 w-72 sm:w-80 md:w-96 lg:w-[28rem] max-h-[75vh] flex items-center justify-end pointer-events-none z-40 transition-all duration-300 ${
+            className={`fixed left-[48%] lg:left-[50%] top-1/2 -translate-y-1/2 w-64 sm:w-72 md:w-80 lg:w-96 max-h-[70vh] flex items-center justify-start pointer-events-none z-40 transition-all duration-300 ${
               isHovered 
                 ? "opacity-100 translate-x-0" 
                 : "opacity-0 translate-x-4"
@@ -71,7 +71,7 @@ export function ProjectListItem({
             <img
               src={image}
               alt={title}
-              className="w-full h-auto max-h-[75vh] object-contain shadow-2xl border border-border/40"
+              className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
             />
           </div>
         </div>
