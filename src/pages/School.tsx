@@ -67,6 +67,33 @@ const School = () => {
                 </div>
               </RevealText>
             )}
+            {school.socialLinks && (
+              <RevealText>
+                <div>
+                  <p className="text-label mb-2">Redes sociais</p>
+                  <div className="space-y-3">
+                    {school.socialLinks.youtube && (
+                      <a href={school.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
+                        <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                        <span>YouTube</span>
+                      </a>
+                    )}
+                    {school.socialLinks.linkedin && (
+                      <a href={school.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
+                        <Linkedin size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                        <span>LinkedIn</span>
+                      </a>
+                    )}
+                    {school.socialLinks.instagram && (
+                      <a href={school.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover-highlight group">
+                        <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                        <span>Instagram</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </RevealText>
+            )}
           </div>
 
           {hasHighlights ? (
@@ -107,6 +134,23 @@ const School = () => {
         </section>
       )}
 
+      {/* Data ICMC: imagens das aulas abaixo do conteúdo */}
+      {school.id === "cursos-especializacao-rapida" && school.images.length > 0 && (
+        <section className="pb-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+            {school.images.map((img, index) => (
+              <div key={index} className="overflow-hidden" style={{ aspectRatio: "16/9" }}>
+                <img
+                  src={img as string}
+                  alt={`${school.title} - aula ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {school.courses.length > 0 && (
         <section className="container-wide pt-12 md:pt-16 pb-16 md:pb-24">
           <RevealText>
@@ -114,36 +158,6 @@ const School = () => {
               <p className="text-label mb-4">Cursos</p>
               <div className="space-y-2">
                 {school.courses.map((course) => <Link key={course.id} to={`/formacao/${school.id}/${course.id}`} className="block text-lg hover-highlight">{course.title}</Link>)}
-              </div>
-            </div>
-          </RevealText>
-        </section>
-      )}
-
-      {school.socialLinks && (
-        <section className="container-wide pb-16 md:pb-24">
-          <RevealText>
-            <div>
-              <p className="text-label mb-4">Redes sociais</p>
-              <div className="flex flex-wrap gap-3">
-                {school.socialLinks.youtube && (
-                  <a href={school.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
-                    <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                    <span>YouTube</span>
-                  </a>
-                )}
-                {school.socialLinks.linkedin && (
-                  <a href={school.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
-                    <Linkedin size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                    <span>LinkedIn</span>
-                  </a>
-                )}
-                {school.socialLinks.instagram && (
-                  <a href={school.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
-                    <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                    <span>Instagram</span>
-                  </a>
-                )}
               </div>
             </div>
           </RevealText>
