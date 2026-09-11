@@ -120,7 +120,7 @@ const School = () => {
 
       {/* PUCPR: Galeria abaixo do texto e dos tópicos */}
       {school.id === "pucpr" && school.images.length > 0 && (
-        <section className="pb-0">
+        <section className="container-wide pb-0">
           <div className="grid grid-cols-2 gap-1">
             {school.images.flatMap((img, rowIdx) => Array.isArray(img)
               ? img.map((src, colIdx) => (
@@ -136,8 +136,8 @@ const School = () => {
 
       {/* Data ICMC: imagens das aulas abaixo do conteúdo */}
       {school.id === "cursos-especializacao-rapida" && school.images.length > 0 && (
-        <section className="pb-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+        <section className="container-wide pb-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {school.images.map((img, index) => (
               <div key={index} className="overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <img
