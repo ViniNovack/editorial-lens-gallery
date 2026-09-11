@@ -15,6 +15,7 @@ import logoData from "@/assets/Logo_DATA.png";
 import paginaDeFundoData from "@/assets/pagina_de_fundo_DATA.jpg";
 import aulaData1 from "@/assets/aula_DATA_1.jpg";
 import aulaData2 from "@/assets/aula_DATA_2.jpg";
+import logoCursoDataMachi from "@/assets/logo_curso_data_machi.jpg";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -96,7 +97,7 @@ export const schools: School[] = [
         year: "2026 - 2029",
         website: "https://www.pucpr.br/cursos-graduacao/ciencia-da-computacao/",
         studyRepositories: [
-          { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-" },
+          { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-/" },
           { title: "Programa-o_Inperativa_C", url: "https://github.com/ViniNovack/Programa-o_Inperativa_C" },
           { title: "Programacao_web_PUC", url: "https://github.com/ViniNovack/Programacao_web_PUC" },
           { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm... etc" },
@@ -158,7 +159,7 @@ export const schools: School[] = [
         github: "https://github.com/icmc-data/Curso-de-Machine-Learning-2025",
         description: "Abordando desde conceitos básicos até técnicas avançadas. Aprenda regressão, classificação, redes neurais e mais, com aulas práticas em Python. Ideal para quem quer dominar inteligência artificial e ciência de dados!",
         coverImage: tarotCards,
-        images: [tarotCards],
+        images: [logoCursoDataMachi],
         icon: "brain",
       },
     ],
