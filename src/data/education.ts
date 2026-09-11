@@ -57,6 +57,11 @@ export interface School {
   logo?: string;
   campus?: string;
   website?: string;
+  socialLinks?: {
+    youtube?: string;
+    linkedin?: string;
+    instagram?: string;
+  };
   tags: string[];
   year: string;
   description: string;
@@ -128,6 +133,11 @@ export const schools: School[] = [
     id: "cursos-especializacao-rapida",
     title: "Data ICMC",
     website: "https://data.icmc.usp.br/",
+    socialLinks: {
+      youtube: "https://www.youtube.com/c/DataICMC",
+      linkedin: "https://www.linkedin.com/school/data-icmc/",
+      instagram: "https://www.instagram.com/data.icmc/",
+    },
     tags: ["CURSOS"],
     year: "2026",
     description: "O Data ICMC é um grupo de extensão do Instituto de Ciências Matemáticas e de Computação ICMC-USP da Universidade de São Paulo USP localizado no campus de São Carlos. Fundado em 2019, o grupo é focado em Ciência de Dados e Aprendizado de Máquina. O Data busca integrar estudantes, acadêmicos e profissionais do setor, promovendo a troca de conhecimento e o desenvolvimento de habilidades técnicas. Através de aulas, eventos, grupos de estudo e palestras, o grupo facilita o acesso a tecnologias de ponta e práticas atuais, preparando seus membros para os desafios do mercado de trabalho.",
