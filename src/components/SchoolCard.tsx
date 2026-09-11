@@ -1,15 +1,39 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GraduationCap, Computer } from "lucide-react";
+import { GraduationCap, Computer, Brain } from "lucide-react";
 import type { School, Course } from "@/data/education";
 
 // Ícones que representam a área de cada curso (chave usada no campo "icon" do curso)
 const courseIcons: Record<string, typeof Computer> = {
   computer: Computer,
+  brain: Brain,
 };
 
-// Ícone do curso; cai de volta na flechinha padrão quando nenhum ícone é definido
+// Ícone do curso; usa um pato de borracha desenhado em linha quando "duck" é definido
 const CourseIcon = ({ course }: { course: Course }) => {
+  if (course.icon === "duck") {
+    return (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-muted-foreground shrink-0"
+        aria-label="Pato de borracha"
+      >
+        <path d="M5.5 15.5c0-3.1 2.2-5.5 5.2-5.8V7.8c0-1.8 1.5-3.3 3.3-3.3 1.5 0 2.7 1 3.1 2.4.3-.1.7-.2 1-.2 1.2 0 2.2 1 2.2 2.2 0 .7-.3 1.3-.8 1.7 1.5 1 2.5 2.7 2.5 4.7 0 3.2-2.7 5.8-6 5.8h-5.3c-2.9 0-5.2-2.4-5.2-5.6Z" />
+        <path d="M16.8 9.2c.8.1 1.7.4 2.4.9" />
+        <path d="M17.5 7.2h1.2l1.3-.7-1.3 2" />
+        <circle cx="16.8" cy="7.2" r=".45" fill="currentColor" stroke="none" />
+        <path d="M5.7 14.1 3.2 13c-.7-.3-1.1-1-.8-1.7.3-.7 1-.9 1.7-.6l2.3 1" />
+      </svg>
+    );
+  }
+
   const Icon = course.icon ? courseIcons[course.icon] : null;
   if (!Icon) {
     return <span className="text-muted-foreground">→</span>;
@@ -33,7 +57,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
         onMouseLeave={() => setHoveredImage(null)}
       >
         <GraduationCap size={28} className="text-muted-foreground group-hover:text-accent transition-colors shrink-0 mt-1" />
-        <div className="flex-1 flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <h2 className="text-xl md:text-2xl font-sans uppercase tracking-wide group-hover:text-accent transition-colors">
             {school.title}
           </h2>
@@ -45,9 +69,6 @@ export function SchoolCard({ school }: SchoolCardProps) {
               {tag}
             </span>
           ))}
-          <span className="text-xs uppercase tracking-widest text-muted-foreground ml-auto">
-            {school.year}
-          </span>
         </div>
       </Link>
 
@@ -61,24 +82,17 @@ export function SchoolCard({ school }: SchoolCardProps) {
             onMouseLeave={() => setHoveredImage(null)}
           >
             <CourseIcon course={course} />
-            <span className="flex-1 text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
+            <span className="text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
               {course.title}
             </span>
-            {course.year && (
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                {course.year}
+            {course.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+              >
+                {tag}
               </span>
-            )}
-            <div className="flex items-center gap-2">
-              {course.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            ))}
           </Link>
         ))}
       </div>
