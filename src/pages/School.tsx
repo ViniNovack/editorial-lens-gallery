@@ -14,12 +14,13 @@ const School = () => {
 
   const hasHighlights = school.highlights && school.highlights.length > 0;
   const isPucpr = school.id === "pucpr";
+  const isHarvard = school.id === "instituto-tecnologico-avancado";
 
   return (
     <Layout noPadding headerRevealMode>
-      {isPucpr ? (
+      {isPucpr || isHarvard ? (
         <>
-          {/* PUCPR: Hero full-width com logo sobreposta */}
+          {/* Instituições com hero em tela cheia */}
           <section className="relative w-full" style={{ height: "80vh", minHeight: "480px" }}>
             <img
               src={school.coverImage}
@@ -29,13 +30,15 @@ const School = () => {
             {/* Overlay gradiente para melhor legibilidade */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
 
-            {/* Logo no canto superior esquerdo */}
+            {/* Logo da instituição no canto superior esquerdo */}
             {school.logo && (
               <div className="absolute top-24 left-6 md:left-12">
                 <img
                   src={school.logo}
-                  alt="PUCPR - Logo"
-                  className="h-28 md:h-40 object-contain drop-shadow-2xl"
+                  alt={`${school.title} - Logo`}
+                  className={isHarvard
+                    ? "h-32 md:h-48 w-auto object-contain drop-shadow-2xl"
+                    : "h-28 md:h-40 object-contain drop-shadow-2xl"}
                   style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.7))" }}
                 />
               </div>
@@ -206,7 +209,7 @@ const School = () => {
       )}
 
       {/* Gallery (só aparece para escolas sem highlights e sem layout especial) */}
-      {!hasHighlights && !isPucpr && (
+      {!hasHighlights && !isPucpr && !isHarvard && (
         <section className="container-wide pb-16 md:pb-24">
           <div className="space-y-8 md:space-y-12">
             {school.images.map((image, index) => (
