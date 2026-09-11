@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { ArrowLeft, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowLeft, Sparkles, GraduationCap, Youtube, Linkedin, Instagram } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { RevealText } from "@/components/RevealText";
 import { schools } from "@/data/education";
@@ -114,6 +114,36 @@ const School = () => {
               <p className="text-label mb-4">Cursos</p>
               <div className="space-y-2">
                 {school.courses.map((course) => <Link key={course.id} to={`/formacao/${school.id}/${course.id}`} className="block text-lg hover-highlight">{course.title}</Link>)}
+              </div>
+            </div>
+          </RevealText>
+        </section>
+      )}
+
+      {school.socialLinks && (
+        <section className="container-wide pb-16 md:pb-24">
+          <RevealText>
+            <div>
+              <p className="text-label mb-4">Redes sociais</p>
+              <div className="flex flex-wrap gap-3">
+                {school.socialLinks.youtube && (
+                  <a href={school.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
+                    <Youtube size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>YouTube</span>
+                  </a>
+                )}
+                {school.socialLinks.linkedin && (
+                  <a href={school.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
+                    <Linkedin size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>LinkedIn</span>
+                  </a>
+                )}
+                {school.socialLinks.instagram && (
+                  <a href={school.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-5 py-3 border border-border text-base hover-highlight group">
+                    <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                    <span>Instagram</span>
+                  </a>
+                )}
               </div>
             </div>
           </RevealText>
