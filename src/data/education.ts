@@ -6,6 +6,11 @@ import pucprCampus2 from "@/assets/pucpr-campus2.jpg";
 import pucprCampus3 from "@/assets/pucpr-campus3.jpg";
 import imagemComputadores from "@/assets/imagem_computadores.jpg";
 import imagemComputadores2 from "@/assets/imagem_computadores_2.jpg";
+import estruturaHa from "@/assets/estrutura_ha.png";
+import harvardUniversityShield from "@/assets/Harvard_University_shield.png";
+import cs50Logo from "@/assets/cs50_logo.png";
+import aulaCs50_1 from "@/assets/aula_cs50_1.png";
+import aulaCs50_2 from "@/assets/aula_cs50_2.png";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -98,11 +103,12 @@ export const schools: School[] = [
     id: "instituto-tecnologico-avancado",
     title: "Harvard",
     fullName: "Harvard",
+    logo: harvardUniversityShield,
     website: "https://www.harvard.edu/",
     tags: ["UNIVERSIDADE", "CURSOS"],
     year: "2024",
     description: "A Universidade Harvard é uma das instituições de ensino superior mais antigas e reconhecidas dos Estados Unidos, fundada em 1636 e localizada em Cambridge, Massachusetts. Ao longo de sua história, tornou-se uma referência internacional em educação, pesquisa e produção de conhecimento, reunindo diversas áreas de estudo e uma comunidade acadêmica formada por estudantes, professores e pesquisadores de diferentes partes do mundo.\n\nHarvard possui uma forte tradição de excelência acadêmica e pesquisa, com escolas e programas dedicados a diferentes campos do conhecimento. A universidade também se destaca por sua contribuição para a ciência, tecnologia, artes, humanidades, negócios, direito, medicina e outras áreas, além de manter iniciativas educacionais abertas ao público, como cursos online que permitem que pessoas de diferentes lugares tenham acesso a conteúdos produzidos pela instituição.",
-    coverImage: tarotCards,
+    coverImage: estruturaHa,
     images: [tarotCards],
     courses: [
       {
@@ -112,7 +118,7 @@ export const schools: School[] = [
         website: "https://pll.harvard.edu/course/cs50-introduction-computer-science",
         description: "Este é o CS50x, a introdução da Universidade de Harvard aos fundamentos da ciência da computação e à arte da programação, destinada tanto a alunos da área quanto a não alunos, com ou sem experiência prévia em programação. Ministrado por David J. Malan, o CS50x é um curso introdutório que ensina os alunos a pensar algoritmicamente e a resolver problemas de forma eficiente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulamento, gerenciamento de recursos, segurança, engenharia de software e desenvolvimento web. As linguagens utilizadas são C, Python, SQL e JavaScript, além de CSS e HTML. Os conjuntos de problemas são inspirados em áreas do mundo real, como biologia, criptografia, finanças, ciência forense e jogos. A versão presencial do CS50x, o CS50, é o maior curso oferecido por Harvard.\n\nAlunos que obtiverem uma nota satisfatória em 9 listas de exercícios (ou seja, tarefas de programação) e em um projeto final estarão aptos a receber um certificado. Este é um curso autodidático – você pode cursar CS50x no seu próprio ritmo.",
         coverImage: tarotCards,
-        images: [tarotCards],
+        images: [cs50Logo, [aulaCs50_1, aulaCs50_2]],
         icon: "duck",
       },
     ],
