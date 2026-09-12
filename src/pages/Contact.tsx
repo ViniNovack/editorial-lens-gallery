@@ -16,7 +16,7 @@ const Contact = () => {
         <motion.div
           aria-hidden="true"
           style={{ y: sigmaY }}
-          className="absolute -left-16 -top-16 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-12 pointer-events-none select-none"
+          className="absolute -left-16 -top-16 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-[24deg] pointer-events-none select-none"
         >
           <Sigma className="w-full h-full" strokeWidth={1} />
         </motion.div>
@@ -25,7 +25,7 @@ const Contact = () => {
         <motion.div
           aria-hidden="true"
           style={{ y: piY }}
-          className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] -rotate-12 pointer-events-none select-none"
+          className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] -rotate-[24deg] pointer-events-none select-none"
         >
           <Pi className="w-full h-full" strokeWidth={1} />
         </motion.div>
