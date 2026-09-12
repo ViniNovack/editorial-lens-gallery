@@ -55,7 +55,8 @@ export function Header({ revealMode = false }: HeaderProps) {
           {/* Logo */}
           <Link 
             to="/" 
-            className="font-display text-lg font-semibold tracking-tight text-foreground hover:opacity-70 transition-opacity"
+            className="font-sans text-lg font-extrabold tracking-tight text-foreground hover:opacity-70 transition-opacity"
+            style={{ textShadow: "0 1px 1px rgba(255,255,255,0.35)" }}
           >
             Portfolio
           </Link>
@@ -66,11 +67,12 @@ export function Header({ revealMode = false }: HeaderProps) {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs font-sans tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
+                className={`text-xs font-sans font-bold tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
                   location.pathname === item.path
                     ? "text-foreground"
-                    : "text-foreground/80 hover:text-foreground"
+                    : "text-foreground/90 hover:text-foreground"
                 }`}
+                style={{ textShadow: "0 1px 1px rgba(255,255,255,0.35)" }}
               >
                 {item.label}
               </Link>
@@ -81,7 +83,7 @@ export function Header({ revealMode = false }: HeaderProps) {
           <div className="hidden md:flex items-center">
             <button
               onClick={toggleTheme}
-              className="p-2 text-foreground/60 hover:text-foreground transition-colors"
+              className="p-2 text-foreground/80 hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
               {mounted && (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
@@ -92,7 +94,7 @@ export function Header({ revealMode = false }: HeaderProps) {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="p-2 text-foreground/60 hover:text-foreground transition-colors"
+              className="p-2 text-foreground/80 hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
               {mounted && (theme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
