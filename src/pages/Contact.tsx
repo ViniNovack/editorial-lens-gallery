@@ -1,13 +1,20 @@
 import { Layout } from "@/components/Layout";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, Sigma } from "lucide-react";
 import { RevealText } from "@/components/RevealText";
 import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 
 const Contact = () => {
   return (
     <Layout>
-      <section className="container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <section className="relative overflow-hidden container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
+        {/* Símbolo matemático de fundo */}
+        <Sigma
+          aria-hidden="true"
+          className="absolute -left-16 bottom-0 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-12 pointer-events-none select-none"
+          strokeWidth={1}
+        />
+
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="space-y-12">
             <div>
               <RevealText delay={0}>
