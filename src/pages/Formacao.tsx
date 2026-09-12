@@ -10,7 +10,7 @@ const Formacao = () => {
         {/* Símbolo decorativo de fundo da página */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-[8vw] top-[8vh] z-0 rotate-[-12deg] text-foreground opacity-[0.045]"
+          className="pointer-events-none absolute -right-[8vw] top-[8vh] z-0 rotate-[-12deg] text-foreground opacity-[0.06]"
         >
           <GraduationCap
             strokeWidth={1}
@@ -21,7 +21,7 @@ const Formacao = () => {
         {/* Segundo símbolo decorativo no canto inferior esquerdo */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-[9vw] bottom-[2vh] z-0 rotate-[14deg] text-foreground opacity-[0.035]"
+          className="pointer-events-none absolute -left-[9vw] bottom-[2vh] z-0 rotate-[14deg] text-foreground opacity-[0.045]"
         >
           <GraduationCap
             strokeWidth={1}
