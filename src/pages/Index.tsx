@@ -54,7 +54,10 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/15 to-primary/30 z-[5] pointer-events-none" />
 
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-black dark:text-foreground text-center px-4 drop-shadow-sm">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold tracking-tight text-black dark:text-foreground text-center px-4"
+            style={{ textShadow: "0 1px 1px rgba(255,255,255,0.45)" }}
+          >
             Vinícius Jimenez Novack
           </h1>
         </div>
