@@ -56,7 +56,9 @@ const Index = () => {
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold tracking-tight text-black dark:text-foreground text-center px-4"
-            style={{ textShadow: "0 1px 1px rgba(255,255,255,0.45)" }}
+            style={{
+              textShadow: "0 0 4px rgba(255,255,255,0.95), 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.55)",
+            }}
           >
             Vinícius Jimenez Novack
           </h1>
