@@ -90,7 +90,7 @@
     --sidebar-primary: 217 90% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 225 35% 17%;
-    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-accent-foreground: 220 60% 18%;
     --sidebar-border: 225 30% 20%;
     --sidebar-ring: 217 90% 55%;
   }
@@ -148,7 +148,7 @@
 
   .link-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-px bg-current origin-left scale-x-0 transition-transform;
+    @apply absolute bottom-0 left-0 w-full h-px bg-current origin-left scale-x-0 transition-transform duration-300;
   }
 
   .link-underline:hover::after {
