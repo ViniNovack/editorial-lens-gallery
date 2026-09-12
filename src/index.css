@@ -148,7 +148,7 @@
 
   .link-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-px bg-current origin-left scale-x-0 transition-transform duration-300;
+    @apply absolute bottom-0 left-0 w-full h-px bg-current origin-left scale-x-0 transition-transform;
   }
 
   .link-underline:hover::after {
@@ -169,6 +169,14 @@
 }
 
 @layer utilities {
+  .light-text-glow {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.95), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.55);
+  }
+
+  .dark .light-text-glow {
+    text-shadow: none;
+  }
+
   .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
   }
