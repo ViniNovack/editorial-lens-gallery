@@ -1,16 +1,29 @@
 import { Layout } from "@/components/Layout";
-import { Mail, Linkedin, Github, Sigma } from "lucide-react";
+import { Mail, Linkedin, Github, Sigma, Pi } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { RevealText } from "@/components/RevealText";
 import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 
 const Contact = () => {
+  const { scrollY } = useScroll();
+  const sigmaY = useTransform(scrollY, [0, 1200], [0, 180]);
+
   return (
     <Layout>
       <section className="relative overflow-hidden container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
-        {/* Símbolo matemático de fundo */}
-        <Sigma
+        {/* Símbolo matemático de fundo com movimento de parallax */}
+        <motion.div
           aria-hidden="true"
+          style={{ y: sigmaY }}
           className="absolute -left-16 bottom-0 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-12 pointer-events-none select-none"
+        >
+          <Sigma className="w-full h-full" strokeWidth={1} />
+        </motion.div>
+
+        {/* Segundo símbolo matemático fixo */}
+        <Pi
+          aria-hidden="true"
+          className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] -rotate-12 pointer-events-none select-none"
           strokeWidth={1}
         />
 
