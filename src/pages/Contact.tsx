@@ -7,6 +7,7 @@ import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 const Contact = () => {
   const { scrollY } = useScroll();
   const sigmaY = useTransform(scrollY, [0, 1200], [0, 180]);
+  const piY = useTransform(scrollY, [0, 1200], [0, 140]);
 
   return (
     <Layout>
@@ -20,12 +21,14 @@ const Contact = () => {
           <Sigma className="w-full h-full" strokeWidth={1} />
         </motion.div>
 
-        {/* Segundo símbolo matemático fixo */}
-        <Pi
+        {/* Segundo símbolo matemático de fundo com movimento de parallax */}
+        <motion.div
           aria-hidden="true"
+          style={{ y: piY }}
           className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] -rotate-12 pointer-events-none select-none"
-          strokeWidth={1}
-        />
+        >
+          <Pi className="w-full h-full" strokeWidth={1} />
+        </motion.div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="space-y-12">
