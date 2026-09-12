@@ -67,14 +67,11 @@ export function Header({ revealMode = false }: HeaderProps) {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs font-sans font-bold tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
+                className={`light-text-glow text-xs font-sans font-bold tracking-widest uppercase transition-all duration-300 hover:tracking-[0.2em] ${
                   location.pathname === item.path
                     ? "text-foreground"
                     : "text-foreground/90 hover:text-foreground"
                 }`}
-                style={{
-                  textShadow: "0 0 3px rgba(255,255,255,0.95), 0 0 8px rgba(255,255,255,0.8), 0 0 14px rgba(255,255,255,0.55)",
-                }}
               >
                 {item.label}
               </Link>
