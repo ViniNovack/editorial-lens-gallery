@@ -54,7 +54,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent via-primary/15 to-primary/30 z-[5] pointer-events-none" />
 
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-foreground text-center px-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-black dark:text-foreground text-center px-4 drop-shadow-sm">
             Vinícius Jimenez Novack
           </h1>
         </div>
@@ -64,7 +64,7 @@ const Index = () => {
             href="https://www.linkedin.com/in/vininovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 dark:bg-background/10 backdrop-blur-sm border border-black/15 dark:border-foreground/10 text-black/85 dark:text-foreground/70 hover:bg-white/40 dark:hover:bg-background/30 hover:text-black dark:hover:text-foreground transition-colors cursor-pointer shadow-sm"
           >
             <Linkedin size={18} />
             <span className="text-sm font-medium">Vinícius Jimenez Novack</span>
@@ -74,7 +74,7 @@ const Index = () => {
             href="https://github.com/ViniNovack"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-foreground/10 text-foreground/70 hover:bg-background/30 hover:text-foreground transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 dark:bg-background/10 backdrop-blur-sm border border-black/15 dark:border-foreground/10 text-black/85 dark:text-foreground/70 hover:bg-white/40 dark:hover:bg-background/30 hover:text-black dark:hover:text-foreground transition-colors cursor-pointer shadow-sm"
           >
             <Github size={18} />
             <span className="text-sm font-medium">ViniNovack</span>
