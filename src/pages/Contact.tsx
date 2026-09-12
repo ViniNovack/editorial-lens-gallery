@@ -7,7 +7,7 @@ import profileAsset from "@/assets/foto-de-perfil-azul.jpeg.asset.json";
 const Contact = () => {
   const { scrollY } = useScroll();
   const sigmaY = useTransform(scrollY, [0, 1200], [0, 180]);
-  const piY = useTransform(scrollY, [0, 1200], [0, 140]);
+  const piY = useTransform(scrollY, [0, 1200], [0, -160]);
 
   return (
     <Layout>
@@ -16,7 +16,7 @@ const Contact = () => {
         <motion.div
           aria-hidden="true"
           style={{ y: sigmaY }}
-          className="absolute -left-16 bottom-0 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-12 pointer-events-none select-none"
+          className="absolute -left-16 -top-16 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-12 pointer-events-none select-none"
         >
           <Sigma className="w-full h-full" strokeWidth={1} />
         </motion.div>
