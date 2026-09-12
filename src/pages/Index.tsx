@@ -4,6 +4,8 @@ import { Linkedin, Github } from "lucide-react";
 import { RevealText } from "@/components/RevealText";
 import workspaceAsset from "@/assets/workspace-setup-v2.jpg.asset.json";
 import welcomeBgAsset from "@/assets/welcome-bg.jpg.asset.json";
+import capaModoClaro from "@/assets/Capa_modo_claro.png";
+import capaDeBaixoClaro from "@/assets/Capa_de_baixo_claro.png";
 
 const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -38,7 +40,12 @@ const Index = () => {
           <img
             src={workspaceAsset.url}
             alt="Workspace setup"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover dark:hidden"
+          />
+          <img
+            src={capaModoClaro}
+            alt=""
+            className="hidden w-full h-full object-cover dark:block"
           />
         </div>
 
@@ -80,7 +87,12 @@ const Index = () => {
           <img
             src={welcomeBgAsset.url}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover dark:hidden"
+          />
+          <img
+            src={capaDeBaixoClaro}
+            alt=""
+            className="hidden w-full h-full object-cover dark:block"
           />
           <div className="absolute inset-0 bg-primary/30" />
           <div className="absolute top-0 left-0 right-0 h-40 md:h-56 bg-gradient-to-b from-primary/25 to-transparent" />
