@@ -38,13 +38,13 @@ const Index = () => {
           }}
         >
           <img
-            src={workspaceAsset.url}
-            alt="Workspace setup"
+            src={capaModoClaro}
+            alt=""
             className="w-full h-full object-cover dark:hidden"
           />
           <img
-            src={capaModoClaro}
-            alt=""
+            src={workspaceAsset.url}
+            alt="Workspace setup"
             className="hidden w-full h-full object-cover dark:block"
           />
         </div>
@@ -85,12 +85,12 @@ const Index = () => {
       <section className="relative min-h-[80vh] py-24 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={welcomeBgAsset.url}
+            src={capaDeBaixoClaro}
             alt=""
             className="w-full h-full object-cover dark:hidden"
           />
           <img
-            src={capaDeBaixoClaro}
+            src={welcomeBgAsset.url}
             alt=""
             className="hidden w-full h-full object-cover dark:block"
           />
