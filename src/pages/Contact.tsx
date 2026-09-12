@@ -12,20 +12,20 @@ const Contact = () => {
   return (
     <Layout>
       <section className="relative overflow-hidden container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
-        {/* Símbolo matemático de fundo com movimento de parallax */}
+        {/* Símbolo matemático de fundo com movimento de parallax e rotação */}
         <motion.div
           aria-hidden="true"
-          style={{ y: sigmaY }}
-          className="absolute -left-16 -top-16 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] rotate-[24deg] pointer-events-none select-none"
+          style={{ y: sigmaY, rotate: 24 }}
+          className="absolute -left-16 -top-16 w-[28rem] h-[28rem] md:w-[38rem] md:h-[38rem] text-foreground/[0.035] pointer-events-none select-none"
         >
           <Sigma className="w-full h-full" strokeWidth={1} />
         </motion.div>
 
-        {/* Segundo símbolo matemático de fundo com movimento de parallax */}
+        {/* Segundo símbolo matemático de fundo com movimento de parallax e rotação */}
         <motion.div
           aria-hidden="true"
-          style={{ y: piY }}
-          className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] -rotate-[24deg] pointer-events-none select-none"
+          style={{ y: piY, rotate: -24 }}
+          className="absolute -right-16 bottom-0 w-[20rem] h-[20rem] md:w-[28rem] md:h-[28rem] text-foreground/[0.025] pointer-events-none select-none"
         >
           <Pi className="w-full h-full" strokeWidth={1} />
         </motion.div>
