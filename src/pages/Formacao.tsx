@@ -18,6 +18,17 @@ const Formacao = () => {
           />
         </div>
 
+        {/* Segundo símbolo decorativo no canto inferior esquerdo */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-[9vw] bottom-[2vh] z-0 rotate-[14deg] text-foreground opacity-[0.035]"
+        >
+          <GraduationCap
+            strokeWidth={1}
+            className="h-[32vw] w-[32vw] max-h-[520px] max-w-[520px]"
+          />
+        </div>
+
         {/* Header */}
         <section className="container-wide relative z-10 pt-16 md:pt-24 pb-16 md:pb-20">
           <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
