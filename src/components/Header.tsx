@@ -72,7 +72,9 @@ export function Header({ revealMode = false }: HeaderProps) {
                     ? "text-foreground"
                     : "text-foreground/90 hover:text-foreground"
                 }`}
-                style={{ textShadow: "0 1px 1px rgba(255,255,255,0.35)" }}
+                style={{
+                  textShadow: "0 0 3px rgba(255,255,255,0.95), 0 0 8px rgba(255,255,255,0.8), 0 0 14px rgba(255,255,255,0.55)",
+                }}
               >
                 {item.label}
               </Link>
