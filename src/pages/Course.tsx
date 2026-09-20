@@ -77,19 +77,6 @@ const Course = () => {
                 <p>{course.year || "2026 - 2029"}</p>
               </div>
             </RevealText>
-            {course.website && (
-              <RevealText>
-                <a
-                  href={course.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-base hover-highlight group"
-                >
-                  <GraduationCap size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                  <span>Página Oficial</span>
-                </a>
-              </RevealText>
-            )}
             {course.studyRepositories && course.studyRepositories.length > 0 && (
               <RevealText>
                 <div className="space-y-3">
@@ -110,20 +97,26 @@ const Course = () => {
               </RevealText>
             )}
 
-            {(course.github || course.youtube) && (
+            {(course.github || course.youtube || course.website) && (
               <RevealText>
                 <div className="space-y-3">
                   <p className="text-label mb-2">Acesso ao curso</p>
+                  {course.youtube && (
+                    <a href={course.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
+                      <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                      <span>YouTube</span>
+                    </a>
+                  )}
+                  {course.website && (
+                    <a href={course.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
+                      <GraduationCap size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                      <span>Página Oficial</span>
+                    </a>
+                  )}
                   {course.github && (
                     <a href={course.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
                       <Github size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
                       <span>Repositório do curso</span>
-                    </a>
-                  )}
-                  {course.youtube && (
-                    <a href={course.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
-                      <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                      <span>Vídeo do curso</span>
                     </a>
                   )}
                 </div>
