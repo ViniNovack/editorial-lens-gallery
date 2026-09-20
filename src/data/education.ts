@@ -22,6 +22,8 @@ import tituloCursoEmVideo from "@/assets/titulo_curso_em_video.jpg";
 import destPatrocinio from "@/assets/dest-patrocinio.png";
 import imgWa0030 from "@/assets/IMG-20241016-WA0030.jpg";
 import imgWa0014 from "@/assets/IMG-20241016-WA0014.jpg";
+import maxresdefault from "@/assets/maxresdefault.jpg";
+import capturaPython from "@/assets/Captura de tela 2026-09-20 101332.png";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -187,7 +189,7 @@ export const schools: School[] = [
         tags: ["PYTHON", "PROGRAMAÇÃO"],
         description: "Neste curso, você será guiado de forma progressiva, partindo do básico, para construir uma sólida compreensão da linguagem Python. O objetivo é fazer com que você desenvolva uma base forte em programação, permitindo que, futuramente, possa se especializar em áreas como desenvolvimento web, inteligência artificial, ciência de dados, automação, entre outras.\n\nOs conteúdos são apresentados de maneira didática, com analogias e exemplos do cotidiano, tornando mais fácil entender conceitos que, à primeira vista, podem parecer complicados. Além disso, exercícios práticos são propostos ao longo de todo o curso para que você possa aplicar o que aprendeu e fixar o conteúdo.",
         coverImage: tarotCards,
-        images: [],
+        images: [maxresdefault, capturaPython],
       },
       {
         id: "curso-inteligencia-artificial",
