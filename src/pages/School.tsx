@@ -134,6 +134,34 @@ const School = () => {
         </section>
       )}
 
+      {/* Curso em Vídeo: patrocinadores em estrutura de pirâmide */}
+      {school.id === "curso-em-video" && school.images.length > 0 && (
+        <section className="container-wide pb-0">
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-full overflow-hidden">
+              <img
+                src={school.images[0] as string}
+                alt="Curso em Vídeo - patrocinador principal"
+                className="mx-auto w-full object-contain transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            {Array.isArray(school.images[1]) && (
+              <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-4">
+                {school.images[1].map((img, index) => (
+                  <div key={index} className="overflow-hidden">
+                    <img
+                      src={img}
+                      alt="Curso em Vídeo - patrocinador"
+                      className="w-full object-contain transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Data ICMC: imagens das aulas abaixo do conteúdo */}
       {school.id === "cursos-especializacao-rapida" && school.images.length > 0 && (
         <section className="container-wide pb-0">
