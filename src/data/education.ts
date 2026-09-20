@@ -19,6 +19,9 @@ import aulaData2 from "@/assets/aula_DATA_2.jpg";
 import logoCursoDataMachi from "@/assets/logo_curso_data_machi.jpg";
 import cursoEmVideoLogo from "@/assets/cursoemvideo-logo.png";
 import tituloCursoEmVideo from "@/assets/titulo_curso_em_video.jpg";
+import destPatrocinio from "@/assets/dest-patrocinio.png";
+import imgWa0030 from "@/assets/IMG-20241016-WA0030.jpg";
+import imgWa0014 from "@/assets/IMG-20241016-WA0014.jpg";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -176,7 +179,7 @@ export const schools: School[] = [
     year: "2026",
     description: "Criado por Gustavo Guanabara, o Curso em Vídeo ajuda milhões de pessoas a aprender tecnologia de forma gratuita, acessível e prática.\n\nGustavo Guanabara é professor de tecnologia e atua na área da educação desde 1994. Ao longo de mais de 30 anos de carreira, lecionou em diferentes níveis de ensino, da educação infantil aos cursos técnicos, universidades e preparatórios para concursos públicos. Também atua como palestrante em eventos de tecnologia e educação, compartilhando sua experiência com estudantes, professores e profissionais de todo o Brasil.\n\nCriador do Curso em Vídeo e do [Estudonauta](https://www.estudonauta.com/), tornou-se uma das principais referências em educação tecnológica no Brasil. Mantém um dos maiores canais de tecnologia em língua portuguesa no YouTube, onde já ajudou milhões de pessoas a dar os primeiros passos na programação.",
     coverImage: tituloCursoEmVideo,
-    images: [],
+    images: [destPatrocinio, [imgWa0030, imgWa0014]],
     courses: [
       {
         id: "curso-python",
