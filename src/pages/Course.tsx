@@ -16,6 +16,7 @@ const Course = () => {
 
   const hasHighlights = course.highlights && course.highlights.length > 0;
   const isPucBcc = school.id === "pucpr" && course.id === "bacharelado-ciencia-da-computacao";
+  const isCursoPython = school.id === "curso-em-video" && course.id === "curso-python";
 
   return (
     <Layout noPadding headerRevealMode>
@@ -182,6 +183,25 @@ const Course = () => {
                       className="w-full h-full object-cover"
                     />
                   ))}
+                </div>
+              )}
+            </div>
+          ) : isCursoPython ? (
+            <div className="space-y-8 md:space-y-12">
+              <div className="image-reveal animate-fade-in-up">
+                <img
+                  src={course.images[0] as string}
+                  alt={`${course.title} - imagem principal`}
+                  className="w-full object-contain"
+                />
+              </div>
+              {course.images[1] && !Array.isArray(course.images[1]) && (
+                <div className="flex justify-center image-reveal animate-fade-in-up">
+                  <img
+                    src={course.images[1] as string}
+                    alt={`${course.title} - captura de tela`}
+                    className="w-full max-w-2xl object-contain"
+                  />
                 </div>
               )}
             </div>
