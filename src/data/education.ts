@@ -185,7 +185,7 @@ export const schools: School[] = [
         id: "curso-python",
         title: "Curso de Python",
         tags: ["PYTHON", "PROGRAMAÇÃO"],
-        description: "Curso de Python.",
+        description: "Neste curso, você será guiado de forma progressiva, partindo do básico, para construir uma sólida compreensão da linguagem Python. O objetivo é fazer com que você desenvolva uma base forte em programação, permitindo que, futuramente, possa se especializar em áreas como desenvolvimento web, inteligência artificial, ciência de dados, automação, entre outras.\n\nOs conteúdos são apresentados de maneira didática, com analogias e exemplos do cotidiano, tornando mais fácil entender conceitos que, à primeira vista, podem parecer complicados. Além disso, exercícios práticos são propostos ao longo de todo o curso para que você possa aplicar o que aprendeu e fixar o conteúdo.",
         coverImage: tarotCards,
         images: [],
       },
