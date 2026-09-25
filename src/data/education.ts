@@ -24,6 +24,8 @@ import imgWa0030 from "@/assets/IMG-20241016-WA0030.jpg";
 import imgWa0014 from "@/assets/IMG-20241016-WA0014.jpg";
 import maxresdefault from "@/assets/maxresdefault.jpg";
 import capturaPython from "@/assets/Captura de tela 2026-09-20 101332.png";
+import capaIA from "@/assets/capa_IA.png";
+import modulosIA from "@/assets/modulos_IA.png";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -206,7 +208,7 @@ export const schools: School[] = [
         youtube: "https://www.youtube.com/playlist?list=PLHz_AreHm4dm24MhlWJYiR_Rm7TFtvs6S",
         description: "Este curso foi criado para qualquer pessoa que deseja dominar a inteligência artificial de forma prática e estratégica. Serve para iniciantes, estudantes e profissionais de diferentes áreas que buscam ganhar produtividade, melhorar a qualidade do trabalho e entender como as IAs realmente funcionam. O conteúdo é do Curso em Vídeo com apoio da FIAP, da Hostnet e do Estudonauta, unindo base teórica clara com aplicação direta no dia a dia.\n\nVocê começa entendendo o que é inteligência artificial, como ela surgiu e por que se tornou uma habilidade valorizada. Conceitos como Machine Learning, Deep Learning, memória de contexto e processamento de linguagem são apresentados de modo acessível, para que você compreenda por que uma IA responde do jeito que responde e como orientar esses sistemas com mais precisão. Em seguida, entra em cena a engenharia de prompt. Você aprende a criar instruções objetivas e eficazes, abandonando a dependência de modelos prontos e passando a estruturar pedidos alinhados ao seu objetivo, ao seu projeto e à sua rotina.",
         coverImage: tarotCards,
-        images: [],
+        images: [capaIA, modulosIA],
       },
       {
         id: "curso-sql-mysql",
