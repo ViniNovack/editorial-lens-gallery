@@ -226,7 +226,7 @@ export const schools: School[] = [
       {
         id: "curso-programacao-orientada-a-objeto",
         title: "Curso de Programação Orientada a Objeto",
-        tags: ["PROGRAMAÇÃO ORIENTADA A OBJETO"],
+        tags: ["POO", "PYTHON", "JAVA"],
         description: "Curso de Programação Orientada a Objeto.",
         coverImage: tarotCards,
         images: [],
