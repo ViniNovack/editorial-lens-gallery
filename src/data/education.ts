@@ -26,7 +26,7 @@ import destPatrocinio from "@/assets/dest-patrocinio.png";
 import imgWa0030 from "@/assets/IMG-20241016-WA0030.jpg";
 import imgWa0014 from "@/assets/IMG-20241016-WA0014.jpg";
 import maxresdefault from "@/assets/maxresdefault.jpg";
-import capturaPython from "@/assets/captura-python.png";
+import capturaPython from "@/assets/Captura de tela 2026-09-20 101332.png";
 import capaIA from "@/assets/capa_IA.png";
 import modulosIA from "@/assets/modulos_IA.png";
 import capaSQL from "@/assets/capa_SQL.png";
