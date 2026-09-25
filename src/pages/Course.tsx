@@ -17,6 +17,11 @@ const Course = () => {
   const hasHighlights = course.highlights && course.highlights.length > 0;
   const isPucBcc = school.id === "pucpr" && course.id === "bacharelado-ciencia-da-computacao";
   const isCursoPython = school.id === "curso-em-video" && course.id === "curso-python";
+  const isHalfSizeGallery = [
+    "curso-inteligencia-artificial",
+    "curso-sql-mysql",
+    "curso-programacao-orientada-a-objeto",
+  ].includes(course.id);
 
   return (
     <Layout noPadding headerRevealMode>
@@ -225,7 +230,13 @@ const Course = () => {
                       ))}
                     </div>
                   ) : (
-                    <img src={image} alt={`${course.title} - ${index + 1}`} className="w-full" />
+                    <div className={isHalfSizeGallery && index === 1 ? "flex justify-center" : ""}>
+                      <img
+                        src={image}
+                        alt={`${course.title} - ${index + 1}`}
+                        className={isHalfSizeGallery && index === 1 ? "w-1/2" : "w-full"}
+                      />
+                    </div>
                   )}
                 </div>
               ))}
