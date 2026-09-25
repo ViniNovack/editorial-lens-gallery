@@ -119,14 +119,28 @@ export function SchoolCard({ school }: SchoolCardProps) {
                 )}
               </div>
 
-              {course.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-                >
-                  {tag}
-                </span>
-              ))}
+              {course.tags.map((tag) => {
+                const isPooTag = course.id === "curso-programacao-orientada-a-objeto" && tag === "POO";
+
+                return (
+                  <span
+                    key={tag}
+                    className="relative text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+                  >
+                    {tag}
+
+                    {isPooTag && courseLogo && (
+                      <div className="absolute left-[-18rem] top-[calc(100%+1rem)] w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-y-2 group-hover/course:opacity-100 group-hover/course:translate-y-0 transition-all duration-300">
+                        <img
+                          src={courseLogo}
+                          alt={`${course.title} - Logo`}
+                          className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
+                        />
+                      </div>
+                    )}
+                  </span>
+                );
+              })}
             </Link>
           );
         })}
