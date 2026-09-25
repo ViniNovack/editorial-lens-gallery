@@ -26,6 +26,8 @@ import maxresdefault from "@/assets/maxresdefault.jpg";
 import capturaPython from "@/assets/Captura de tela 2026-09-20 101332.png";
 import capaIA from "@/assets/capa_IA.png";
 import modulosIA from "@/assets/modulos_IA.png";
+import capaSQL from "@/assets/capa_SQL.png";
+import capa2SQL from "@/assets/capa_2_SQL.png";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -110,7 +112,7 @@ export const schools: School[] = [
           { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-/" },
           { title: "Programa-o_Inperativa_C", url: "https://github.com/ViniNovack/Programa-o_Inperativa_C" },
           { title: "Programacao_web_PUC", url: "https://github.com/ViniNovack/Programacao_web_PUC" },
-          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm... etc" },
+          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm..." },
         ],
         description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
@@ -214,9 +216,12 @@ export const schools: School[] = [
         id: "curso-sql-mysql",
         title: "Curso de SQL/MYSQL",
         tags: ["SQL", "MYSQL"],
-        description: "Curso de SQL e MySQL.",
+        year: "2026",
+        website: "https://www.cursoemvideo.com/curso/mysql/",
+        youtube: "https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r",
+        description: "O curso de **MySQL do Curso em Vídeo** é uma jornada completa para quem deseja compreender como funcionam os bancos de dados relacionais — da criação até o gerenciamento avançado de informações.\n\nLogo nas primeiras aulas, o aluno entende o que é um banco de dados e por que ele é fundamental para qualquer sistema moderno que dependa de armazenamento e organização de dados.\n\nAo longo do aprendizado, o professor apresenta como instalar as ferramentas **WAMP** e **XAMPP**, criando um ambiente de desenvolvimento estável e funcional. Com esse preparo, o estudante aprende a criar seu primeiro banco de dados e a manipular tabelas com comandos essenciais como `ALTER TABLE`, `DROP TABLE`, `INSERT INTO`, `UPDATE`, `DELETE` e `TRUNCATE`.\n\nO curso também mostra como realizar **cópias de segurança (backups)** e restaurar bancos de dados, garantindo a segurança das informações. Outro destaque é o uso do **PHPMyAdmin**, uma interface visual que facilita o gerenciamento de dados de maneira intuitiva.\n\nNas etapas seguintes, o aluno domina consultas com o comando `SELECT`, aprende a aplicar filtros, organizar resultados e compreender o funcionamento do **modelo relacional**, incluindo **chaves estrangeiras** e o uso de **JOINs**. A prática com **INNER JOIN em várias tabelas** amplia a capacidade de trabalhar com dados interligados, uma competência essencial para quem quer atuar em desenvolvimento web ou análise de dados.\n\nAcesso ao curso:\nPagina oficial: https://www.cursoemvideo.com/curso/mysql/\nYouTube: https://www.youtube.com/playlist?list=PLHz_AreHm4dkBs-795Dsgvau_ekxg8g1r",
         coverImage: tarotCards,
-        images: [],
+        images: [capaSQL, capa2SQL],
       },
       {
         id: "curso-programacao-orientada-a-objeto",
