@@ -187,6 +187,7 @@ export const schools: School[] = [
         id: "curso-python",
         title: "Curso de Python",
         tags: ["PYTHON", "PROGRAMAÇÃO"],
+        year: "2026",
         youtube: "https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6",
         website: "https://www.cursoemvideo.com/curso/python-3-mundo-1/",
         studyRepositories: [
