@@ -28,6 +28,8 @@ import capaIA from "@/assets/capa_IA.png";
 import modulosIA from "@/assets/modulos_IA.png";
 import capaSQL from "@/assets/capa_SQL.png";
 import capa2SQL from "@/assets/capa_2_SQL.png";
+import capaPOO from "@/assets/capa_POO.png";
+import capaPOO2 from "@/assets/capa_POO_2.png";
 
 export { pucprHero, pucprLogo, pucprCampus1, pucprCampus2, pucprCampus3 };
 
@@ -112,7 +114,7 @@ export const schools: School[] = [
           { title: "Jogo-Jokenp-", url: "https://github.com/ViniNovack/Jogo-Jokenp-/" },
           { title: "Programa-o_Inperativa_C", url: "https://github.com/ViniNovack/Programa-o_Inperativa_C" },
           { title: "Programacao_web_PUC", url: "https://github.com/ViniNovack/Programacao_web_PUC" },
-          { title: "Racioc-nio_Algoritimico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm..." },
+          { title: "Racioc-nio_Algoritmico", url: "https://github.com/ViniNovack/Faculdade-Racioc-nio_Algoritm..." },
         ],
         description: "O Bacharelado em Ciência da Computação da PUCPR forma profissionais prontos para liderar o futuro da tecnologia. Com base nas competências mais valorizadas pelo mercado e nos referenciais da Sociedade Brasileira de Computação (SBC), Institute of Electrical and Electronics Engineers (IEEE) e Association for Computing Machinery (ACM), o curso prepara você para criar softwares inovadores e desenvolver sistemas inteligentes. Toda a formação prepara o futuro profissional para atuação em áreas estratégicas como Ciência de Dados e Inteligência Artificial, com foco em Aprendizagem de Máquina, Big Data e outras tecnologias — transformando desafios em soluções éticas, criativas e de alto impacto.",
         coverImage: tarotCards,
@@ -235,8 +237,10 @@ export const schools: School[] = [
         youtube: "https://www.youtube.com/playlist?list=PLHz_AreHm4dn_RXXoa3Ameh77f95Hgwv3",
         description: "Durante as aulas, o aluno entende de forma natural o que é um objeto, como definir visibilidade de atributos e métodos, e como utilizar construtores, getters e setters para garantir um código limpo e bem estruturado. A partir daí, o conteúdo avança para temas como **relacionamentos entre classes, herança, polimorfismo e agregação**, mostrando na prática como esses conceitos tornam o desenvolvimento mais eficiente e organizado.\n\nO projeto final reúne tudo o que foi aprendido, permitindo aplicar os conceitos em um exemplo completo de aplicação em Python. É uma excelente oportunidade para consolidar o aprendizado e desenvolver um portfólio técnico com código funcional e bem estruturado.",
         coverImage: tarotCards,
-        images: [],
+        images: [capaPOO, capaPOO2],
       },
     ],
   },
 ];
+
+
