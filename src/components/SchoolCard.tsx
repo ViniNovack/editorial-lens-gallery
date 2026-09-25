@@ -94,22 +94,29 @@ export function SchoolCard({ school }: SchoolCardProps) {
         {school.courses.map((course) => {
           // Por convenção, a primeira imagem do curso é sua logo.
           const courseLogo = typeof course.images[0] === "string" ? course.images[0] : null;
+          const isPoo = course.id === "curso-programacao-orientada-a-objeto";
 
           return (
             <Link
               key={course.id}
               to={`/formacao/${school.id}/${course.id}`}
-              className="flex flex-wrap items-center gap-3"
+              className="flex flex-wrap items-center gap-3 group/course"
             >
               <CourseIcon course={course} />
 
-              <div className="relative w-fit group/course">
+              <div className="relative w-fit">
                 <span className="text-base uppercase tracking-wide group-hover/course:text-accent transition-colors">
                   {course.title}
                 </span>
 
                 {courseLogo && (
-                  <div className="absolute left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-x-4 group-hover/course:opacity-100 group-hover/course:translate-x-0 transition-all duration-300">
+                  <div
+                    className={`absolute ${
+                      isPoo
+                        ? "left-4 sm:left-28 md:left-36 lg:left-40 top-[calc(100%+0.75rem)] w-52 sm:w-64 md:w-72 lg:w-80 translate-y-2 group-hover/course:translate-y-0"
+                        : "left-[calc(100%+4rem)] top-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-80 translate-x-4 group-hover/course:translate-x-0"
+                    } max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 group-hover/course:opacity-100 transition-all duration-300`}
+                  >
                     <img
                       src={courseLogo}
                       alt={`${course.title} - Logo`}
@@ -119,28 +126,14 @@ export function SchoolCard({ school }: SchoolCardProps) {
                 )}
               </div>
 
-              {course.tags.map((tag) => {
-                const isPooTag = course.id === "curso-programacao-orientada-a-objeto" && tag === "POO";
-
-                return (
-                  <span
-                    key={tag}
-                    className="relative text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
-                  >
-                    {tag}
-
-                    {isPooTag && courseLogo && (
-                      <div className="absolute left-[-46rem] top-[calc(100%+12rem)] w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-y-2 group-hover/course:opacity-100 group-hover/course:translate-y-0 transition-all duration-300">
-                        <img
-                          src={courseLogo}
-                          alt={`${course.title} - Logo`}
-                          className="w-full h-auto max-h-[70vh] object-contain shadow-2xl border border-border/40"
-                        />
-                      </div>
-                    )}
-                  </span>
-                );
-              })}
+              {course.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] uppercase tracking-widest px-3 py-1 border border-separator text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
             </Link>
           );
         })}
