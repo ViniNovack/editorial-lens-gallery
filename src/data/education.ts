@@ -8,6 +8,9 @@ import imagemComputadores from "@/assets/imagem_computadores.jpg";
 import imagemComputadores2 from "@/assets/imagem_computadores_2.jpg";
 import logoPucBcc from "@/assets/Logo_PUC_BCC.png";
 import estruturaHa from "@/assets/estrutura_ha.png";
+import imagem1Har from "@/assets/imagem_1_har.png";
+import imagem2Har from "@/assets/imagem_2_har.png";
+import imagem3Har from "@/assets/imagem_3_har.png";
 import harvardUniversityShield from "@/assets/Harvard_University_shield.png";
 import cs50Logo from "@/assets/cs50_logo.png";
 import aulaCs50_1 from "@/assets/aula_cs50_1.png";
@@ -133,7 +136,7 @@ export const schools: School[] = [
     year: "2024",
     description: "A Universidade Harvard é uma das instituições de ensino superior mais antigas e reconhecidas dos Estados Unidos, fundada em 1636 e localizada em Cambridge, Massachusetts. Ao longo de sua história, tornou-se uma referência internacional em educação, pesquisa e produção de conhecimento, reunindo diversas áreas de estudo e uma comunidade acadêmica formada por estudantes, professores e pesquisadores de diferentes partes do mundo.\n\nHarvard possui uma forte tradição de excelência acadêmica e pesquisa, com escolas e programas dedicados a diferentes campos do conhecimento. A universidade também se destaca por sua contribuição para a ciência, tecnologia, artes, humanidades, negócios, direito, medicina e outras áreas, além de manter iniciativas educacionais abertas ao público, como cursos online que permitem que pessoas de diferentes lugares tenham acesso a conteúdos produzidos pela instituição.",
     coverImage: estruturaHa,
-    images: [tarotCards],
+    images: [imagem1Har, [imagem2Har, imagem3Har]],
     courses: [
       {
         id: "cs50",
