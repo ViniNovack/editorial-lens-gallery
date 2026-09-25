@@ -102,16 +102,16 @@ const Course = () => {
               <RevealText>
                 <div className="space-y-3">
                   <p className="text-label mb-2">Acesso ao curso</p>
-                  {course.youtube && (
-                    <a href={course.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
-                      <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                      <span>YouTube</span>
-                    </a>
-                  )}
                   {course.website && (
                     <a href={course.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
                       <GraduationCap size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
                       <span>Página Oficial</span>
+                    </a>
+                  )}
+                  {course.youtube && (
+                    <a href={course.youtube} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-base hover-highlight group">
+                      <Youtube size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                      <span>YouTube</span>
                     </a>
                   )}
                   {course.github && (
