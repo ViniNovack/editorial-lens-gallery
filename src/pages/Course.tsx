@@ -88,10 +88,10 @@ const Course = () => {
                       href={repository.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex w-44 min-h-10 items-center gap-3 px-3 py-2 text-base hover-highlight group"
+                      className="flex w-fit max-w-56 min-h-10 items-center gap-3 px-3 py-2 text-base hover-highlight group"
                     >
                       <Github size={18} className="shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
-                      <span className="min-w-0 whitespace-normal break-words leading-tight">{repository.title}</span>
+                      <span className="min-w-0 max-w-[13rem] line-clamp-2 leading-tight">{repository.title}</span>
                     </a>
                   ))}
                 </div>
