@@ -130,7 +130,7 @@ export function SchoolCard({ school }: SchoolCardProps) {
                     {tag}
 
                     {isPooTag && courseLogo && (
-                      <div className="absolute left-[-30rem] top-[calc(100%+5rem)] w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-y-2 group-hover/course:opacity-100 group-hover/course:translate-y-0 transition-all duration-300">
+                      <div className="absolute left-[-34rem] top-[calc(100%+7rem)] w-48 sm:w-56 md:w-64 lg:w-80 max-h-[70vh] flex items-center justify-center pointer-events-none z-40 opacity-0 translate-y-2 group-hover/course:opacity-100 group-hover/course:translate-y-0 transition-all duration-300">
                         <img
                           src={courseLogo}
                           alt={`${course.title} - Logo`}
